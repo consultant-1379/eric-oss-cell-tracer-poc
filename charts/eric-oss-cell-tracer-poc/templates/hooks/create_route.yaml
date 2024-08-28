@@ -1,0 +1,67 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+{{- if and .Values.baseUrl .Values.clientId .Values.clientSecret .Values.gui.exposed}}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "eric-oss-cell-tracer-poc.name" . }}-create-route
+  labels: {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+  annotations: {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "15"
+    "helm.sh/hook-delete-policy": before-hook-creation, hook-succeeded, hook-failed
+spec:
+  template:
+    metadata:
+      labels: {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 8 }}
+      annotations: {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 8 }}
+    spec:
+      {{- if include "eric-oss-cell-tracer-poc.pullSecret" . }}
+      imagePullSecrets:
+        - name: {{ include "eric-oss-cell-tracer-poc.pullSecret" . | quote}}
+      {{- end }}
+      restartPolicy: Never
+      containers:
+      - name: eric-api-gateway-client
+        image: {{ include "eric-oss-cell-tracer-poc.imagePath" (merge (dict "imageName" "eric-api-gateway-client") .) }}
+        imagePullPolicy: {{ template "eric-oss-cell-tracer-poc.registryImagePullPolicy" . }}
+        args:
+          - {{ .Values.baseUrl | replace "iam." "gas." | quote }}
+          - "--client-id"
+          - {{ .Values.clientId | quote }}
+          - "--client-credential"
+          - {{ .Values.clientSecret | quote }}
+          - "upgrade"
+          - '/config/route.json'
+        env:
+          - name: CA_CERT_PATH
+            value: "{{ .Values.caCertMountPath }}/{{ .Values.caSecretKey }}"
+        volumeMounts:
+          - name: route-volume
+            mountPath: /config
+          - name: cacert-volume
+            mountPath: {{ .Values.caCertMountPath }}
+        securityContext: {{ include "eric-oss-cell-tracer-poc.containerSecurityContext" . | nindent 10 }}
+      volumes:
+        - name: route-volume
+          configMap:
+            name: {{ include "eric-oss-cell-tracer-poc.name" . }}-configmap
+            defaultMode: 0777
+        - name: cacert-volume
+          secret:
+            secretName: {{ .Values.caSecretName }}
+{{- end }}

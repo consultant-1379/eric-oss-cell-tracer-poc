@@ -1,0 +1,78 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "columns": [
+      {
+        "attribute": "timestamp",
+        "title": "Timestamp",
+        "width": "20vh"
+      },
+      {
+        "attribute": "gnodebName",
+        "title": "Node"
+      },
+      {
+        "attribute": "eventTypeName",
+        "title": "Type",
+        "width": "28vh"
+      },
+      {
+        "attribute": "nwFunction",
+        "title": "Network nFunction",
+        "width": "8vh"
+      },
+      {
+        "attribute": "trcLevel",
+        "title": "Level",
+        "width": "8vh"
+      },
+      {
+        "attribute": "ueTraceId",
+        "title": "ueTraceId",
+        "width": "16vh"
+      },
+      {
+        "attribute": "traceRecordingSessionReference",
+        "title": "traceRecordingSessionReference",
+        "width": "16vh"
+      }
+    ],
+    "custom": {
+      "onCreatedDetailsRow": {
+        "attribute": "body"
+      }
+    },
+    "expandable": true,
+    "filterable": false,
+    "multiSelect": false,
+    "sortAttr": "timestamp",
+    "sortMode": "dec",
+    "style": "min-height:10vh;max-height:50vh;",
+    "tile": {
+      "actions": [
+        {
+          "auto": {
+            "name": "refresh_table",
+            "trace": true
+          },
+          "footer": true,
+          "primary": true,
+          "title": "Refresh"
+        }
+      ],
+      "auto": {
+        "name": "trace_filter"
+      },
+      "defaultTestData": false,
+      "linkWidgets": [
+        "trace_tree_select",
+        "trace_date_select"
+      ],
+      "title": "Cell Trace"
+    }
+  },
+  "format": "csv",
+  "name": "trace_table",
+  "systemTypes": [],
+  "type": "Table"
+}

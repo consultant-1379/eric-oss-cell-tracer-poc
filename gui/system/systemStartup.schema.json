@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "systemStartup.schema.json",
+  "title": "System Startup",
+  "description": "Tasks to execute at restart",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "whoami": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object"
+        },
+        "userAttribute": {
+          "type": "string"
+        }
+      }
+    },
+    "client": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "autos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "args": {
+                "type": "object"
+              },
+              "trace": {
+                "type": "boolean"
+              },
+              "headers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cookies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "autos": []
+      }
+    },
+    "system": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "autos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "args": {
+                "type": "object"
+              },
+              "trace": {
+                "type": "boolean"
+              },
+              "headers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cookies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "default": {
+        "autos": []
+      }
+    }
+  },
+  "examples": [
+    {
+      "client": {
+        "autos": [
+          {
+            "name": "login_dev"
+          }
+        ]
+      }
+    }
+  ]
+}

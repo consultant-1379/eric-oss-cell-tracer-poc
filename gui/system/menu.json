@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "childNames": [
+        "app-trace-subscription",
+        "app-cell-trace",
+        "app-sequence-diagram",
+        "app-design",
+        "app-oas"
+      ],
+      "displayName": "Cell Trace PoC",
+      "name": "app-pim",
+      "route": "owl-dynamic-app-trace",
+      "version": "1.0.0"
+    },
+    {
+      "displayName": "Table View",
+      "name": "app-cell-trace",
+      "type": "euisdk"
+    },
+    {
+      "displayName": "Subscription",
+      "name": "app-trace-subscription",
+      "type": "euisdk"
+    },
+    {
+      "displayName": "Sequence Diagram",
+      "name": "app-sequence-diagram",
+      "type": "euisdk"
+    },
+    {
+      "displayName": "Design",
+      "name": "app-design",
+      "type": "euisdk"
+    },
+    {
+      "displayName": "OAS",
+      "name": "app-oas",
+      "type": "euisdk"
+    }
+  ],
+  "defaultApp": "owl-dynamic-app-trace/owl-dynamic-app-cell-trace",
+  "hideMenu": false,
+  "openMenu": true,
+  "searchable": true
+}

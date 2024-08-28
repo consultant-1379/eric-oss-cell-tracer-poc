@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Node",
+    "data": "node-id",
+    "children": [
+      {
+        "label": "gNodeB Id1"
+      },
+      {
+        "label": "gNodeB Id2"
+      },
+      {
+        "label": "gNodeB Id2"
+      }
+    ]
+  }
+]

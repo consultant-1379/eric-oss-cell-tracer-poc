@@ -1,0 +1,16 @@
+{
+  "cookie": {
+    "maxAge": 7776000000
+  },
+  "externalLogin": {
+    "auto": {
+      "name": ""
+    },
+    "defaultRoles": [],
+    "enabled": false
+  },
+  "externalUser": false,
+  "name": "owl33.connect.sid",
+  "resave": true,
+  "saveUninitialized": true
+}

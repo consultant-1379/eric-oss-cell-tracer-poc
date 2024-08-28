@@ -1,0 +1,30 @@
+{
+  "$schema": "app.schema.json",
+  "config": {
+    "dashboardStyle": "grid-template-columns: 1fr;",
+    "description": "",
+    "dialogs": [],
+    "multiPanelStyle": "",
+    "sideTiles": [
+      {
+        "icon": "tree-subcategories",
+        "name": "trace_tree_subscription",
+        "resizable": true,
+        "show": true,
+        "slot": "left",
+        "subtitle": "",
+        "title": "Node and Network service selection",
+        "width": 700
+      }
+    ],
+    "tiles": [
+      {
+        "column": 2,
+        "name": "trace_form",
+        "row": 1
+      }
+    ]
+  },
+  "name": "app-trace-subscription",
+  "type": "multiPanel"
+}

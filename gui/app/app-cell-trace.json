@@ -1,0 +1,37 @@
+{
+  "$schema": "app.schema.json",
+  "config": {
+    "dashboardStyle": "grid-template-columns: 1fr;",
+    "description": "",
+    "dialogs": [],
+    "multiPanelStyle": "",
+    "sideTiles": [
+      {
+        "icon": "tree-subcategories",
+        "name": "trace_tree_select",
+        "show": false,
+        "slot": "left",
+        "subtitle": "",
+        "title": "Filter",
+        "width": 850
+      },
+      {
+        "icon": "filter",
+        "name": "trace_date_select",
+        "show": false,
+        "slot": "left",
+        "subtitle": "",
+        "title": "Filter",
+        "width": 450
+      }
+    ],
+    "tiles": [
+      {
+        "name": "trace_table"
+      }
+    ],
+    "title": "Cell Trace"
+  },
+  "name": "app-cell-trace",
+  "type": "multiPanel"
+}

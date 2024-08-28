@@ -1,0 +1,177 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "eric-oss-cell-tracer-poc.fullname" . }}
+  labels:
+  {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+  {{- include "eric-oss-cell-tracer-poc.prometheus" . | nindent 4 }}
+spec:
+{{- if not .Values.autoScaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "eric-oss-cell-tracer-poc.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  strategy:
+    type: {{ .Values.updateStrategy.type | quote }}
+    {{- if and (eq .Values.updateStrategy.type "RollingUpdate") .Values.updateStrategy.rollingUpdate }}
+    rollingUpdate:
+      maxUnavailable: {{ .Values.updateStrategy.rollingUpdate.maxUnavailable }}
+      maxSurge: {{ .Values.updateStrategy.rollingUpdate.maxSurge }}
+    {{- end }}
+  template:
+    metadata:
+      labels:
+        {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 8 }}
+        {{- include "eric-oss-cell-tracer-poc.directStreamingLabel" . | nindent 8 }}
+      annotations:
+        {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 8 }}
+        {{- include "eric-oss-cell-tracer-poc.prometheus" . | nindent 8 }}
+        {{- include "eric-oss-cell-tracer-poc.container-annotations" . | nindent 8 }}
+    spec:
+      {{- if include "eric-oss-cell-tracer-poc.pullSecret" . }}
+      imagePullSecrets:
+        - name: {{ include "eric-oss-cell-tracer-poc.pullSecret" . | quote}}
+      {{- end }}
+      serviceAccountName: {{ template "eric-oss-cell-tracer-poc.fullname" . }}
+      securityContext:
+        fsGroup: {{ include "eric-oss-cell-tracer-poc.fsGroup.coordinated" . }}
+        {{- include "eric-oss-cell-tracer-poc.seccomp-profile" . | indent 8 }}
+      volumes:
+        - name: tmp-volume
+          emptyDir: {}
+        {{- if .Values.clientId }}
+        - name: cacert-volume
+          secret:
+            secretName: {{ .Values.caSecretName }}
+        - name: kafka-cacert-volume
+          secret:
+            secretName: {{ .Values.kafkaSecretName }}
+        - name: tmp-kafka-certs-volume
+          emptyDir: {}
+        {{- end }}
+        - name: config-volume
+          configMap:
+            defaultMode: 493
+            name: {{ include "eric-oss-cell-tracer-poc.name" . }}-configmap
+      restartPolicy: {{ .Values.restartPolicy.deployment }}
+      containers:
+      {{- if .Values.asn1DecoderPort }}
+        - name: eric-oss-asn1-decoder-poc
+          image: {{ template "eric-oss-cell-tracer-poc.asn1DecoderImagePath" . }}
+          imagePullPolicy: {{ template "eric-oss-cell-tracer-poc.registryImagePullPolicy" . }}
+          securityContext: {{ include "eric-oss-cell-tracer-poc.containerSecurityContext" . | nindent 12 }}
+          volumeMounts:
+            - mountPath: /tmp
+              name: tmp-volume
+            - name: config-volume
+              mountPath: /config
+          ports:
+            - name: grpc
+              containerPort: {{ .Values.asn1DecoderPort }}
+              protocol: TCP
+          {{ include "eric-oss-cell-tracer-poc.asn1DecoderHealthProbes" . | nindent 10 }}
+          env:
+            - name: JMX_PORT
+              value: {{ .Values.asn1DecoderJmxPort | quote }}
+            {{- include "eric-oss-cell-tracer-poc.loggingEnv" . | indent 12 }}
+          resources: {{- include "eric-oss-cell-tracer-poc.asn1DecoderImageResourceAllocation" . | nindent 12 }}
+      {{- end }}
+        - name: eric-oss-cell-tracer-poc
+          image: {{ template "eric-oss-cell-tracer-poc.mainImagePath" . }}
+          imagePullPolicy: {{ template "eric-oss-cell-tracer-poc.registryImagePullPolicy" . }}
+          securityContext: {{ include "eric-oss-cell-tracer-poc.containerSecurityContext" . | nindent 12 }}
+          volumeMounts:
+            - mountPath: /tmp
+              name: tmp-volume
+            - name: config-volume
+              mountPath: /config
+            {{- if .Values.clientId }}
+            - name: cacert-volume
+              mountPath: {{ .Values.caCertMountPath }}
+            - name: kafka-cacert-volume
+              mountPath: {{ .Values.kafkaCaCertMountPath }}
+            - mountPath: /tmp/certs
+              name: tmp-kafka-certs-volume
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          {{ include "eric-oss-cell-tracer-poc.mainHealthProbes" . | nindent 10 }}
+          env:
+          - name: SERVICE_ID
+            value: {{ include "eric-oss-cell-tracer-poc.name" . | quote}}
+          - name: JAVA_OPTS
+            value: {{ include "eric-oss-cell-tracer-poc.jvmHeapSettings" . }}
+          - name: TZ
+            value: {{ template "eric-oss-cell-tracer-poc.timezone" . }}
+          {{- if and .Values.baseUrl .Values.clientId .Values.clientSecret }}
+          - name: BASE_URL
+            value: {{ .Values.baseUrl | quote }}
+          - name: CLIENT_ID
+            value: {{ .Values.clientId | quote }}
+          - name: CLIENT_SECRET
+            value: {{ .Values.clientSecret | quote }}
+          - name: KAFKA_BOOTSTRAP_SERVICE
+            value: "{{ regexReplaceAll "^(https?://)?(\\w+)" .Values.baseUrl "bootstrap" }}:443"
+          - name: CA_CERT_LOCATION
+            value: "{{ .Values.caCertMountPath }}"
+          - name: TRUST_STORE_LOCATION
+            value: "/tmp/certs"
+          - name: KAFKA_CERT_LOCATION
+            value: {{ .Values.kafkaCaCertMountPath | quote }}
+          - name: TRUST_STORE_PASSWORD
+            value: {{ randAlphaNum 16 | b64enc | quote }}
+          {{- end }}
+          - name: DB_URL
+            value: {{ include "eric-oss-cell-tracer-poc.db-url" . | quote }}
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "eric-oss-cell-tracer-poc.fullname" . }}-database-pg-secret
+                key: custom-user
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "eric-oss-cell-tracer-poc.fullname" . }}-database-pg-secret
+                key: custom-pwd
+      {{- include "eric-oss-cell-tracer-poc.loggingEnv" . | indent 10 }}
+          resources: {{- include "eric-oss-cell-tracer-poc.mainImageResourceAllocation" . | nindent 12 }}
+      nodeSelector: {{ include "eric-oss-cell-tracer-poc.nodeSelector" . | nindent 6 -}}
+
+      {{- with .Values.terminationGracePeriodSeconds }}
+      terminationGracePeriodSeconds: {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- with .Values.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- if (index .Values "podPriority" "eric-oss-cell-tracer-poc" "priorityClassName") }}
+      priorityClassName: {{ (index .Values "podPriority" "eric-oss-cell-tracer-poc" "priorityClassName") }}
+      {{- end }}
+
+      {{- with .Values.topologySpreadConstraints.deployment }}
+      topologySpreadConstraints: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- include "eric-oss-cell-tracer-poc.appAffinity" . | indent 6 }}

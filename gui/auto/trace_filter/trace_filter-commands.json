@@ -1,0 +1,71 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 0,
+      "input": {
+        "config": {
+          "argsSchema": {},
+          "showDialog": false
+        },
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": -311,
+      "posY": -71,
+      "type": "start"
+    },
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 1,
+      "input": {
+        "config": {
+          "action": "get",
+          "dataFormat": "json",
+          "dataType": "items"
+        },
+        "configFormat": "json",
+        "data": [
+          "trace_sample"
+        ],
+        "dataFormat": "json",
+        "name": "items",
+        "title": "items"
+      },
+      "posX": -156.52,
+      "posY": -71.18,
+      "type": "storage"
+    },
+    {
+      "edges": [],
+      "id": 2,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "private",
+          "sendType": "set",
+          "widgetName": "trace_table"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "table",
+        "title": "table"
+      },
+      "posX": -7,
+      "posY": -72.5,
+      "type": "widget"
+    }
+  ]
+}

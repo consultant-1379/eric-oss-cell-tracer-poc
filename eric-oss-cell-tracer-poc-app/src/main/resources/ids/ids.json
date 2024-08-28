@@ -1,0 +1,23 @@
+{
+  "version": 0.1,
+  "subscriptions": [
+    {
+      "name": "5g-pm-events",
+      "isMandatory": "yes",
+      "isOnHold": "no",
+      "consumer": "CELLTRACE",
+      "dataType": {
+        "dataspace": "5G",
+        "dataCategory": "PM_EVENTS",
+        "dataProvider": "RAN",
+        "schemaName": "PmEventOuterClass.PmEvent",
+        "schemaVersion": "1"
+      },
+      "predicates": {
+        "nodeName": [
+          "142158ff-3c87-4877-9600-6a918b481bb5"
+        ]
+      }
+    }
+  ]
+}

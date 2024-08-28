@@ -1,0 +1,190 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "rows": [
+      {
+        "cols": [
+          {
+            "sections": [
+              {
+                "text": "Status",
+                "type": "text"
+              },
+              {
+                "attribute": "status",
+                "textField": {
+                  "disabled": true,
+                  "placeholder": ""
+                },
+                "type": "textField"
+              }
+            ]
+          },
+          {
+            "sections": [
+              {
+                "text": "Start Date",
+                "type": "text"
+              },
+              {
+                "attribute": "startDateStatus",
+                "textField": {
+                  "disabled": true,
+                  "placeholder": ""
+                },
+                "type": "textField"
+              }
+            ]
+          },
+          {
+            "sections": [
+              {
+                "text": "End Date",
+                "type": "text"
+              },
+              {
+                "attribute": "endDateStatus",
+                "textField": {
+                  "disabled": true,
+                  "placeholder": ""
+                },
+                "type": "textField"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "sections": [
+              {
+                "text": "Description",
+                "type": "text"
+              },
+              {
+                "attribute": "session",
+                "textField": {
+                  "disabled": false,
+                  "placeholder": "Session name"
+                },
+                "type": "textField"
+              }
+            ]
+          },
+          {
+            "sections": [
+              {
+                "text": "Timeout period (minutes)",
+                "type": "text"
+              },
+              {
+                "attribute": "period",
+                "textField": {
+                  "disabled": false,
+                  "placeholder": "20"
+                },
+                "type": "textField"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "sections": [
+              {
+                "text": "Schedule",
+                "type": "text",
+                "validate": true
+              },
+              {
+                "attribute": "schedule",
+                "switch": {
+                  "on": false
+                },
+                "type": "switch",
+                "validate": true
+              },
+              {
+                "attribute": "startTime",
+                "datepicker": {
+                  "format": "epoch",
+                  "nowAsText": true,
+                  "nowLabel": "Ignore",
+                  "prefix": "Start Date",
+                  "withNow": false
+                },
+                "type": "datepicker",
+                "validate": true
+              }
+            ]
+          },
+          {
+            "sections": [
+              {
+                "text": "Until",
+                "type": "text",
+                "validate": true
+              },
+              {
+                "attribute": "until",
+                "switch": {
+                  "on": false
+                },
+                "type": "switch",
+                "validate": true
+              },
+              {
+                "attribute": "endTime",
+                "datepicker": {
+                  "format": "epoch",
+                  "nowAsText": true,
+                  "nowLabel": "Ignore",
+                  "prefix": "End Date",
+                  "withNow": false
+                },
+                "type": "datepicker",
+                "validate": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "style": "",
+    "tile": {
+      "actions": [
+        {
+          "auto": {
+            "name": "cancel_trace",
+            "trace": true
+          },
+          "footer": true,
+          "title": "Cancel"
+        },
+        {
+          "auto": {
+            "name": "start_trace",
+            "trace": true
+          },
+          "footer": true,
+          "primary": true,
+          "title": "Start Cell trace"
+        }
+      ],
+      "defaultTestData": false,
+      "linkWidgets": [
+        "trace_form",
+        "trace_tree_subscription"
+      ],
+      "subtitle": "",
+      "title": ""
+    }
+  },
+  "format": "csv",
+  "name": "trace_form",
+  "systemTypes": [],
+  "type": "Form"
+}

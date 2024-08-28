@@ -1,0 +1,25 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "style": ".widget-rows {\n    min-height:65vh;\n    max-height:65vh;\n}",
+    "tile": {
+      "auto": {
+        "args": {
+          "app": "subscription"
+        },
+        "name": "trace_tree_select"
+      },
+      "defaultTestData": false,
+      "subtitle": ""
+    },
+    "tree": {
+      "dataTitle": "",
+      "filter": true,
+      "selectionTitle": ""
+    }
+  },
+  "format": "csv",
+  "name": "trace_tree_subscription",
+  "systemTypes": [],
+  "type": "TreeSelect"
+}

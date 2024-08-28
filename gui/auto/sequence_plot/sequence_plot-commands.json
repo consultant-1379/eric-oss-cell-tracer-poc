@@ -1,0 +1,85 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 0,
+      "input": {
+        "config": {
+          "argsSchema": {},
+          "showDialog": false
+        },
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": -174,
+      "posY": 30,
+      "type": "start"
+    },
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 2,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "sequence",
+        "title": "fetch-events"
+      },
+      "posX": -58.42,
+      "posY": 31.62,
+      "type": "fetch"
+    },
+    {
+      "edges": [
+        {
+          "id": 3
+        }
+      ],
+      "id": 1,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "private",
+          "sendType": "set",
+          "widgetName": "sequence_diagram"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "seq_plot",
+        "title": "plot"
+      },
+      "posX": 43.5,
+      "posY": 34,
+      "type": "widget"
+    },
+    {
+      "edges": [],
+      "id": 3,
+      "input": {
+        "config": {
+          "action": "put",
+          "dataFormat": "json",
+          "dataType": "items"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": "update-sample"
+      },
+      "posX": 162,
+      "posY": 32,
+      "type": "storage"
+    }
+  ]
+}

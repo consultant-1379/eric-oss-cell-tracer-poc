@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "userDetails.schema.json",
+  "title": "User Details",
+  "description": "User details",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]*$",
+      "minLength": 1
+    },
+    "pass": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array"
+    },
+    "default": {
+      "type": "boolean",
+      "description": "Only one user can be default, if not logged in user will become default user."
+    },
+    "hasImage": {
+      "type": "string"
+    }
+  }
+}

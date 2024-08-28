@@ -1,0 +1,46 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+{{- if .Values.clientId }}
+{{- if .Capabilities.APIVersions.Has "kafka.strimzi.io/v1beta2" }}
+{{- if not (lookup "kafka.strimzi.io/v1beta2" "KafkaUser" .Release.Namespace .Values.clientId) }}
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  name: {{ .Values.clientId }}
+  labels:
+    strimzi.io/cluster: eric-oss-dmm-kf-op-sz
+    {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+  annotations:
+    helm.sh/resource-policy: keep
+    {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+spec:
+  authorization:
+    acls:
+      - operation: All
+        resource:
+          name: '*'
+          patternType: literal
+          type: group
+      - operation: All
+        resource:
+          name: '*'
+          patternType: literal
+          type: topic
+    type: simple
+{{- end }}
+{{- end }}
+{{- end }}

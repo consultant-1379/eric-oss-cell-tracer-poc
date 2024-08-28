@@ -1,0 +1,61 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+productName: "eric-oss-cell-tracer-poc HELM"
+productNumber: "CXC 201 0000"
+images:
+  eric-oss-cell-tracer-poc:
+    productName: "eric-oss-cell-tracer-poc IMAGE"
+    productNumber: "CXC 201 0001"
+    registry: "armdocker.rnd.ericsson.se"
+    repoPath: REPO_PATH
+    name: "eric-oss-cell-tracer-poc"
+    tag: VERSION
+  eric-oss-asn1-decoder-poc:
+    productName: "eric-oss-asn1-decoder-poc IMAGE"
+    productNumber: "CXC 000 0000"
+    registry: "armdocker.rnd.ericsson.se"
+    repoPath: "proj-eric-oss-drop"
+    name: "eric-oss-asn1-decoder-poc"
+    tag: "1.7.0-1"
+  eric-api-gateway-client:
+    productName: "Client for API Gateway"
+    productNumber: "CXC 000 0000"
+    registry: "armdocker.rnd.ericsson.se"
+    repoPath: "proj-eric-oss-drop"
+    name: "eric-api-gateway-client"
+    tag: "1.0.49-64149daf"
+  e-owl:
+    productName: "OWL Frontend"
+    productNumber: "CXC 000 0000"
+    registry: "armdocker.rnd.ericsson.se"
+    repoPath: "proj-eric-oss-drop"
+    name: "e-owl"
+    tag: "1.7.88"
+  owlws:
+    productName: "OWL Backend"
+    productNumber: "CXC 000 0000"
+    registry: "armdocker.rnd.ericsson.se"
+    repoPath: "proj-eric-oss-drop"
+    name: "owlws"
+    tag: "1.7.88"
+  redis:
+    productName: "OWL Frontend"
+    productNumber: "CXC 000 0000"
+    registry: "armdocker.rnd.ericsson.se"
+    repoPath: "dockerhub-ericsson-remote"
+    name: "redis"
+    tag: "5-alpine"

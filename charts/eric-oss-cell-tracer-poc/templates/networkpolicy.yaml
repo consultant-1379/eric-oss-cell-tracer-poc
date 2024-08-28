@@ -1,0 +1,52 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+{{- if and .Values.networkPolicy.enabled (include "eric-oss-cell-tracer-poc.networkPolicy.enabled" .) -}}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "eric-oss-cell-tracer-poc.fullname" . }}
+  labels:
+  {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector: {}
+          podSelector:
+            matchLabels:
+              app.kubernetes.io/instance: {{ .Release.Name }}
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: {{ .Values.metrics.serviceName }}
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: eric-eo-api-gateway
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: eric-adp-gui-aggregator-service
+      ports:
+        - port: {{ .Values.service.port }}
+        - port: 5432
+        - port: 8090
+{{- end -}}

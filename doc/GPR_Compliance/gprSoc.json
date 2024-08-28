@@ -1,0 +1,1334 @@
+{
+  "$schema": "/doc/GPR_Compliance/gprSocSchema.json",
+  "areas": [
+    {
+      "name": "Security GPRs type 'Individual' (previously called Category 'A' Security GPRs)",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134646939",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00120",
+          "status": "Not Compliant",
+          "comment": "Product Hardening Document",
+          "JIRA_ID": "IDUN-122138"
+        },
+        {
+          "id": "65-0164/00121",
+          "status": "Not Compliant",
+          "comment": "Vulnerability Analysis Report",
+          "JIRA_ID": "IDUN-122140"
+        },
+        {
+          "id": "65-0164/00252",
+          "status": "Not Compliant",
+          "comment": "Provide Security User Guide",
+          "JIRA_ID": "IDUN-122141"
+        },
+        {
+          "id": "65-0164/00346",
+          "status": "Not Compliant",
+          "comment": "Security Test Report for external communication must 'Not Compliant' for all the applications",
+          "JIRA_ID": "IDUN-122144"
+        },
+        {
+          "id": "65-0164/00349",
+          "status": "Not Compliant",
+          "comment": "Web application security",
+          "JIRA_ID": "IDUN-122144"
+        },
+        {
+          "id": "65-0164/00502",
+          "status": "Not Compliant",
+          "comment": "Secure coding report",
+          "JIRA_ID": "IDUN-122157"
+        },
+        {
+          "id": "65-0164/00503",
+          "status": "Not Compliant",
+          "comment": "FOSS and other 3PP included in product",
+          "JIRA_ID": "IDUN-119548"
+        },
+        {
+          "id": "65-0164/00504",
+          "status": "Not Compliant",
+          "comment": "This is something that should be done by app manager, based on compatibility information supplied by the rApp.",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-120336"
+        },
+        {
+          "id": "65-0164/00115",
+          "status": "Not Compliant",
+          "comment": "Risk Assessment Report",
+          "JIRA_ID": "IDUN-122134"
+        },
+        {
+          "id": "65-0164/00347",
+          "status": "Not Compliant",
+          "comment": "Undocumented features",
+          "JIRA_ID": "IDUN-122144"
+        },
+        {
+          "id": "65-0164/00122",
+          "status": "Not Compliant",
+          "comment": "Strong encryption",
+          "JIRA_ID": "IDUN-122144"
+        },
+        {
+          "id": "65-0164/00501",
+          "status": "Not Applicable",
+          "comment": "We aren't creating security keys."
+        },
+        {
+          "id": "65-0164/00766",
+          "status": "Not Compliant",
+          "comment": "SoC not ready yet"
+        }
+      ]
+    },
+    {
+      "name": "Security GPRs type 'Framework' (previously called Category 'B' Security GPRs)",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134646941",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00308",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform",
+          "JIRA_ID": "IDUN-123079"
+        },
+        {
+          "id": "65-0164/00235",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00309",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00310",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00311",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00312",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00314",
+          "status": "Compliant",
+          "comment": "There is a separate endpoint implementing this",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-79208"
+        },
+        {
+          "id": "65-0164/00315",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00317",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00320",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of AuthProxy in the platform"
+        },
+        {
+          "id": "65-0164/00321",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00251",
+          "status": "Not Applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00350",
+          "status": "Not applicable",
+          "comment": "Platform should disable the superuser"
+        },
+        {
+          "id": "65-0164/00250",
+          "status": "Not Applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00318",
+          "status": "Not Applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00244",
+          "status": "Not Compliant",
+          "comment": "We need to provide AccessControl rules",
+          "JIRA_ID": "IDUN-122020"
+        },
+        {
+          "id": "65-0164/00319",
+          "status": "Not applicable",
+          "comment": "We aren't communicating with NetworkElements directly"
+        },
+        {
+          "id": "65-0164/00243",
+          "status": "Compliant",
+          "comment": "We have an Auth proxy in place",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-17882"
+        },
+        {
+          "id": "65-0164/00354",
+          "status": "Not Compliant",
+          "comment": "Log streaming",
+          "JIRA_ID": "IDUN-122935"
+        },
+        {
+          "id": "65-0164/00270",
+          "status": "Not applicable",
+          "comment": "Host OS should implement this"
+        },
+        {
+          "id": "65-0164/00305",
+          "status": "Not applicable",
+          "comment": "Host OS should implement this"
+        },
+        {
+          "id": "65-0164/00306",
+          "status": "Not applicable",
+          "comment": "Host OS should implement this"
+        },
+        {
+          "id": "65-0164/00307",
+          "status": "Not applicable",
+          "comment": "Host OS should implement this"
+        },
+        {
+          "id": "65-0164/00324",
+          "status": "Not applicable",
+          "comment": "Infra (k8s) should implement this"
+        },
+        {
+          "id": "65-0164/00119",
+          "status": "Not Applicable",
+          "comment": "It is (should be) part of platform offering."
+        },
+        {
+          "id": "65-0164/00325",
+          "status": "Not Applicable",
+          "comment": "It is (should be) part of platform offering."
+        },
+        {
+          "id": "65-0164/00326",
+          "status": "Not applicable",
+          "comment": "Host OS should implement this"
+        },
+        {
+          "id": "65-0164/00327",
+          "status": "Not applicable",
+          "comment": "It is one of the responsibility of IAM in the platform"
+        },
+        {
+          "id": "65-0164/00348",
+          "status": "Fully Compliant",
+          "comment": "SW gateway is not used for internal deliveries, but it used for external ones and provides SW signing"
+        },
+        {
+          "id": "65-0164/00322",
+          "status": "Not Compliant",
+          "comment": "Verify log schema and the security event logs",
+          "JIRA_ID": "IDUN-122935"
+        },
+        {
+          "id": "65-0164/00254",
+          "status": "Partially Compliant",
+          "comment": "We need to expose actuator endpoint",
+          "JIRA_ID": "IDUN-123287"
+        },
+        {
+          "id": "65-0164/00080",
+          "status": "Not Applicable",
+          "comment": "We are already integrated with the logging framework, only log stream is missing",
+          "JIRA_ID": "IDUN-122935"
+        },
+        {
+          "id": "65-0164/00323",
+          "status": "Not Applicable",
+          "comment": "We are already integrated with the logging framework, only log stream is missing",
+          "JIRA_ID": "IDUN-122935"
+        },
+        {
+          "id": "65-0164/00257",
+          "status": "Not Applicable",
+          "comment": "It is a platform logging feature responsibility"
+        },
+        {
+          "id": "65-0164/00258",
+          "status": "Not Applicable",
+          "comment": "We are already integrated with the logging framework, but if this means do the and we are covering the log streaming in another GPR."
+        },
+        {
+          "id": "65-0164/00259",
+          "status": "Not Applicable",
+          "comment": "It is (should be) part of platform offering."
+        },
+        {
+          "id": "65-0164/00260",
+          "status": "Not Compliant",
+          "comment": "OAuth token information isn't forwarded to the app",
+          "JIRA_ID": "IDUN-122107"
+        },
+        {
+          "id": "65-0164/00261",
+          "status": "Not Applicable",
+          "comment": "It is a platform capability, our application chart not handling external exposure"
+        },
+        {
+          "id": "65-0164/00269",
+          "status": "Not Compliant",
+          "comment": "KMS integration isn't finished yet + the official way of sharing/distributing CA can change / # Todo more clarification needed.",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-17867"
+        },
+        {
+          "id": "65-0164/00262",
+          "status": "Not Compliant",
+          "comment": "Exception request needed until service mesh comes to rescue"
+        },
+        {
+          "id": "65-0164/00265",
+          "status": "Not Applicable",
+          "comment": "We don't handle control plane traffic"
+        },
+        {
+          "id": "65-0164/00351",
+          "status": "Not Applicable",
+          "comment": "Only applicable for microservices utilizing direct connectivity to storage fabric such as iSCSI, NFS, DRBD"
+        },
+        {
+          "id": "65-0164/00352",
+          "status": "Not Compliant",
+          "comment": "EIC responsible for environment.ADP does not support Remote Attestation. Studies ongoing in DNEW OSSEPTAP-8972 Signed and Secure Container SW  and  OSSEPTAP-9397 Remote Attestation of RAN and Transport nodes on software integrity and remote attestation. New OA required on Remote Attestation-Exemption granted on 2022 W38 for 12 months",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-17890"
+        },
+        {
+          "id": "65-0164/00759",
+          "status": "Not Compliant",
+          "comment": "SoC is not ready yet"
+        },
+        {
+          "id": "65-0164/00767",
+          "status": "Not Compliant",
+          "comment": "SoC is not ready yet"
+        }
+      ]
+    },
+    {
+      "name": "Privacy GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Privacy+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00355",
+          "status": "Not Compliant",
+          "JIRA_ID":  "IDUN-121888"
+        },
+        {
+          "id": "65-0164/00364",
+          "status": "Not Compliant",
+          "JIRA_ID":  "IDUN-121891"
+        },
+        {
+          "id": "65-0164/00356",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121892"
+        },
+        {
+          "id": "65-0164/00361",
+          "status": "Not Compliant",
+          "JIRA_ID":  "IDUN-121921"
+        },
+        {
+          "id": "65-0164/00362",
+          "status": "Partially Compliant",
+          "comment": "the data retention is configurable, but should be documented",
+          "JIRA_ID": "IDUN-121922"
+        },
+        {
+          "id": "65-0164/00363",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121923"
+        },
+        {
+          "id": "65-0164/00369",
+          "status": "Not Compliant",
+          "comment": "Spring boot actuator by default does not log request and response body. It is possible to input a cell ID in the requests and log it, but that is not necessarily associated to a real record in the system. The rApp does not handle nor store admin credentials.",
+          "JIRA_ID": "IDUN-122107"
+        },
+        {
+          "id": "65-0164/00546",
+          "status": "Not Applicable",
+          "comment": "there is no subscriber facing interface"
+        },
+        {
+          "id": "65-0164/00547",
+          "status": "Not applicable",
+          "comment": "rApp operates behind API gateway and is integrated with IAM",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00367",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-122020"
+        },
+        {
+          "id": "65-0164/00745",
+          "status": "Not Applicable",
+          "comment": "the service does not manage or evaluate authorization rules to privacy data."
+        },
+        {
+          "id": "65-0164/00544",
+          "status": "Not Applicable",
+          "comment": "encryption at rest is provided by EIC platform",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00545",
+          "status": "Partially Compliant",
+          "comment": "All the interfaces are protected but the database access and the connectivity between API GW and rApp. This should be covered by service mesh introduction. Story open to set upo network rules.",
+          "JIRA_ID": "IDUN-122026",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00358",
+          "status": "Not Applicable",
+          "comment": "The service does not interact with subscribers."
+        },
+        {
+          "id": "65-0164/00512",
+          "status": "Partially Compliant",
+          "comment": "it is possible ot export data in JSON format via query API, however authorization has to be implemented for that.",
+          "JIRA_ID": "IDUN-122020"
+        },
+        {
+          "id": "65-0164/00513",
+          "status": "Not Applicable",
+          "comment": "the personal data handled by the rApp is machine generated by the network and short-lived. It makes no sense to import it."
+        },
+        {
+          "id": "65-0164/00525",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-122111"
+        },
+        {
+          "id": "65-0164/00360",
+          "status": "Not Applicable",
+          "comment": "the service never handles the input of PII from external users"
+        },
+        {
+          "id": "65-0164/00524",
+          "status": "Fully Compliant",
+          "comment": "subscribers cannot be directly identified. This should be re-evaluated if data containing IMSI is included."
+        },
+        {
+          "id": "65-0164/00566",
+          "status": "Not Compliant",
+          "comment": "Neither the JVM nor Postgres implement memory encryption."
+        }
+      ]
+    },
+    {
+      "name": "Design For Environment & Electromagnetics GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647391",
+      "relevant": false,
+      "gprList": []
+    },
+    {
+      "name": "Electronic Software Licensing GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Electronic+Software+Licensing+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00029",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00032",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00035",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00038",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00039",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00043",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00045",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00049",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00050",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00051",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00215",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00220",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00223",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00521",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Marking & Labelling GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647392",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00299",
+          "status": "Not compliant",
+          "JIRA_ID": "IDUN-119548"
+        },
+        {
+          "id": "65-0164/00300",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00539",
+          "status": "Not Relevant"
+        }
+      ]
+    },
+    {
+      "name": "Network Design and Optimization (NDO) GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Network+Design+and+Optimization+%28NDO%29+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00446",
+          "status": "Fully Compliant",
+          "comment": "Spring boot tracks statistics on web response codes, and UI authentication is EIC responsibility."
+        },
+        {
+          "id": "65-0164/00453",
+          "status": "Not compliant",
+          "JIRA_ID": "IDUN-119200"
+        },
+        {
+          "id": "65-0164/00454",
+          "status": "Not Relevant",
+          "EIC_inherited": true,
+          "comment": "Network connectivity is EIC platform responsibility."
+        },
+        {
+          "id": "65-0164/00455",
+          "status": "Not Relevant",
+          "comment": "rApps don't produce performance files and should never switch off performance monitoring."
+        }
+      ]
+    },
+    {
+      "name": "O&M GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647389",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00138",
+          "status": "Fully Compliant",
+          "comment": "Kubectl provides the user a CLI environment and access to the product. the REST API of the cell-tracer rApp is scriptable"
+        },
+        {
+          "id": "65-0164/00139",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp is not an NE and netconf does not apply to this interface."
+        },
+        {
+          "id": "65-0164/00140",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp does not have commands/operations to add/modify/remove objects and their attributes. It use 3pp libraries but not third party SWs."
+        },
+        {
+          "id": "65-0164/00143",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp is not an NE"
+        },
+        {
+          "id": "65-0164/00166",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp is not an NE"
+        },
+        {
+          "id": "65-0164/00171",
+          "status": "Not Applicable",
+          "comment": "Not applicable for this service since it does not provide alarm/alert functions. Even platform itself."
+        },
+        {
+          "id": "65-0164/00172",
+          "status": "Compliant",
+          "comment": "Provided by platform via ADP Fault Handling Service",
+          "JIRA_ID": "IDUN-4165",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00398",
+          "status": "Fully Compliant",
+          "comment": "Cell-tracer rApp has default parameters for application.yaml, values.yaml and helm charts"
+        },
+        {
+          "id": "65-0164/00399",
+          "status": "Not Compliant",
+          "comment": "App manager has capability of change the runtime variables via helm upgrade. The platform should not set if it not defined range.",
+          "JIRA_ID": "IDUN-123622",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00400",
+          "status": "Not Compliant",
+          "comment": "Cell-tracer rApp contains the necessary deployment files in the csar file",
+          "JIRA_ID": "IDUN-120336"
+        },
+        {
+          "id": "65-0164/00402",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp is not a network node"
+        },
+        {
+          "id": "65-0164/00404",
+          "status": "Not Applicable",
+          "comment": "Platform should provide the printing of counter.",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00408",
+          "status": "Fully Compliant",
+          "comment": "EIC platform stores the performance counters.",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00429",
+          "status": "Not Compliant",
+          "comment": "Cell-tracer rApps generates some variables according to the data on the platform.",
+          "JIRA_ID": "IDUN-123643"
+        },
+        {
+          "id": "65-0164/00430",
+          "status": "Not Compliant",
+          "comment": "The platform provides the auto-restart. Need to define the initial installation parameters.",
+          "JIRA_ID": "IDUN-120336"
+        },
+        {
+          "id": "65-0164/00431",
+          "status": "Not Compliant",
+          "comment": "Cell-tracer rApp uses synchronous API. Status codes of HTTP are used."
+        },
+        {
+          "id": "65-0164/00432",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp dos not request any create/update/delete. So, it does not need to provide any notification."
+        },
+        {
+          "id": "65-0164/00433",
+          "status": "Not Applicable",
+          "comment": "There is no product specific requirement for it."
+        },
+        {
+          "id": "65-0164/00434",
+          "status": "Fully Compliant",
+          "comment": "The initial config for the deployment can be found in the application.yaml and it does not require additional configuration compared to the Day-0 configuration."
+        },
+        {
+          "id": "65-0164/00436",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp does not have any conf that is visible/modifiable via external interfaces. It' for the NEs, about sending notifications about configuration changes to the OSS using the Notification service"
+        },
+        {
+          "id": "65-0164/00437",
+          "status": "Not Compliant",
+          "comment": "Restart of a change can be prevent via hot config reload",
+          "JIRA_ID": "IDUN-123287, IDUN-120073"
+        },
+        {
+          "id": "65-0164/00438",
+          "status": "Not Applicable",
+          "comment": "Not applicable, this is an application integration responsibility. This service is not an alarm detection enabler"
+        },
+        {
+          "id": "65-0164/00441",
+          "status": "Fully Compliant",
+          "comment": "Cell-tracer rApp does not a logging function provider. Logs of the service is reachable from the platform itself."
+        },
+        {
+          "id": "65-0164/00445",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp does not include remotely executable commands."
+        },
+        {
+          "id": "65-0164/00447",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp is not include ericsson-swim module and not an NE"
+        },
+        {
+          "id": "65-0164/00449",
+          "status": "Not Applicable",
+          "comment": "Cell-tracer rApp is a SW product only. Not contains HW info"
+        },
+        {
+          "id": "65-0164/00457",
+          "status": "Not Compliant",
+          "comment": "In the case of data restore, there is a very high chance that the stored data has expired.",
+          "JIRA_ID": "IDUN-123144"
+        },
+        {
+          "id": "65-0164/00496",
+          "status": "Fully Compliant",
+          "comment": "All GPRs except 105 65-0164/00138, are not applicable (105 65-0164/00139, 105 65-0164/00172, 105 65-0164/00166, 105 65-0164/00140, 105 65-0164/00143)"
+        },
+        {
+          "id": "65-0164/00508",
+          "status": "Not Compliant",
+          "comment": "In a small restart processes, platform restores the latest version and the configurations.",
+          "JIRA_ID": "IDUN-123144"
+        },
+        {
+          "id": "65-0164/00511",
+          "status": "Partially Compliant",
+          "comment": "The UI of the Cell-tracer rApp uses time setting of the browser."
+        },
+        {
+          "id": "65-0164/00560",
+          "status": "Not Applicable",
+          "comment": "There is not any connected NEs for configuration collections to cell-tracer rApp."
+        },
+        {
+          "id": "65-0164/00561",
+          "status": "Partially Compliant",
+          "comment": "Cell-tracer rApp can provide metrics for the platform",
+          "JIRA_ID": "IDUN-123094"
+        },
+        {
+          "id": "65-0164/00562",
+          "status": "Not Applicable",
+          "comment": "Centralize log collection is provided by platform",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00563",
+          "status": "Fully Compliant",
+          "comment": "Cell-tracer rApp uses openAPI standards"
+        },
+        {
+          "id": "65-0164/00564",
+          "status": "Not Applicable",
+          "comment": "Not applicable for this service since it does not provide alarm/alert functions"
+        },
+        {
+          "id": "65-0164/00565",
+          "status": "Partially Compliant",
+          "comment": "Cell-tracer rApp uses openAPI and no need to create documentation on SDK. ACE Editor can be used for documentation",
+          "JIRA_ID": "IDUN-123101"
+        },
+        {
+          "id": "65-0164/00758",
+          "status": "Not Compliant",
+          "comment": "Cell-tracer application has the SW related info. But SW identification data shall be provided by the platform for interacting with a license management system.",
+          "JIRA_ID": "IDUN-123031"
+        }
+      ]
+    },
+    {
+      "name": "Product Information GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Product+Information+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00097",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00098",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00099",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00102",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00104",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00105",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00106",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00107",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00109",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00111",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00112",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00123",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00127",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00128",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00130",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00131",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00132",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Product Quality & Characteristics GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647386",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00279",
+          "status": "Not Applicable",
+          "comment": "Cell Tracer is a cloud native microservice developed as an rApp to run on the target environment of a non real time RIC. The revised GPR still cannot apply to rApps as the TEA guidelines state that all calculations are made by a node external tool (2/102 60-FAE) and rApps have no governance over the target RIC and its provision of a node external tool to record and calculate outages. Cell Tracer has also been evaluated against TL 9000 Outage Measurements_Ericsson Interpretation and Guideline 2/105 11-FAE 151 02 Uen and TL 9000 Ericsson Table A-2 / A-3 and does not match the description of Network Element herein as it cannot fulfill its primary function without a RIC, and also does not match any of the category described in the table other software component. "
+        },
+        {
+          "id": "65-0164/00301",
+          "status": "Not Applicable",
+          "comment": "No traffic handling. Cell Tracer is a cloud native microservice developed as an rApp to run on the target environment of a non real time RIC. Cell Tracer has been evaluated against TL 9000 Outage Measurements_Ericsson Interpretation and Guideline 2/105 11-FAE 151 02 Uen and TL 9000 Ericsson Table A-2 / A-3 and does not match the description of Network Element herein as it cannot fulfill its primary function without a RIC, and also does not match any of the category described in the table other software component."
+        },
+        {
+          "id": "65-0164/00302",
+          "status": "Not Compliant",
+          "comment": "Sice upgrades are not controlled by /// this is hard to solve by means of software. A process should be in place to monitor faults from customer side.",
+          "JIRA_ID": "IDUN-120015"
+        },
+        {
+          "id": "65-0164/00303",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00375",
+          "status": "Not Relevant",
+          "comment": "Cell tracer is cloud native only"
+        },
+        {
+          "id": "65-0164/00376",
+          "status": "Not Relevant",
+          "comment": "Cell tracer is cloud native only"
+        },
+        {
+          "id": "65-0164/00377",
+          "status": "Not Relevant",
+          "comment": "Cell tracer is cloud native only"
+        },
+        {
+          "id": "65-0164/00378",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00379",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00380",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00381",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00383",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00384",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00385",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00387",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00388",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120073"
+        },
+        {
+          "id": "65-0164/00390",
+          "status": "Not Relevant",
+          "EIC_inherited": true,
+          "comment": "Upgrade is a managed by EIC app manager"
+        },
+        {
+          "id": "65-0164/00395",
+          "status": "Not Relevant",
+          "EIC_inherited": true,
+          "comment": "Upgrade is a managed by EIC app manager"
+        },
+        {
+          "id": "65-0164/00411",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120073"
+        },
+        {
+          "id": "65-0164/00413",
+          "status": "Partially Compliant",
+          "JIRA_ID": "IDUN-120073",
+          "comment": "K8s offers a level of resilience to a node failure but that implies a downtime equal to the restart time."
+        },
+        {
+          "id": "65-0164/00414",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120091"
+        },
+        {
+          "id": "65-0164/00415",
+          "status": "Not Relevant",
+          "comment": "rApp does not handle external connectivity."
+        },
+        {
+          "id": "65-0164/00416",
+          "status": "Not Relevant",
+          "comment": "rApp does not handle external connectivity."
+        },
+        {
+          "id": "65-0164/00417",
+          "status": "Not Relevant",
+          "comment": "rApp does not handle external connectivity."
+        },
+        {
+          "id": "65-0164/00418",
+          "status": "Fully Compliant",
+          "comment": "If NCMP or CTS are overloaded the rApp handles it gracefully (reties with exponential backoff). If Kafka is overloaded the event flow will lag but there is nothing that the rApp can do about that."
+        },
+        {
+          "id": "65-0164/00419",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120091",
+          "comment": "Once rate limiters are in place overload will be communicated with the API reply."
+        },
+        {
+          "id": "65-0164/00420",
+          "status": "Not Compliant",
+          "comment": "Requirement is marked not ready, and in any case it would only apply to Kafka traffic (that is out of rApp control) and query results that represent a modest throughput anyway once rate limiting is in place."
+        },
+        {
+          "id": "65-0164/00421",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120273"
+        },
+        {
+          "id": "65-0164/00428",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120336"
+        },
+        {
+          "id": "65-0164/00435",
+          "status": "Fully Compliant",
+          "comment": "Metrics are scraped by prometheus in EIC and logs are timestamped."
+        },
+        {
+          "id": "65-0164/00439",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120091,IDUN-120273"
+        },
+        {
+          "id": "65-0164/00440",
+          "status": "Not Compliant",
+          "comment": "Depends on EIC capabilities under study",
+          "JIRA_ID": "IDUN-120397"
+        },
+        {
+          "id": "65-0164/00442",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120491"
+        },
+        {
+          "id": "65-0164/00450",
+          "status": "Partially Compliant",
+          "JIRA_ID": "IDUN-120497"
+        },
+        {
+          "id": "65-0164/00451",
+          "status": "Fully Compliant",
+          "comment": "Using mainstream FOSS DB with performance fit for purpose. No need for proprietary technology."
+        },
+        {
+          "id": "65-0164/00452",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120336"
+        },
+        {
+          "id": "65-0164/00462",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120535"
+        },
+        {
+          "id": "65-0164/00464",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120544"
+        },
+        {
+          "id": "65-0164/00514",
+          "status": "Not Applicable",
+          "comment": "First release, cloud native only"
+        },
+        {
+          "id": "65-0164/00749",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00750",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120023"
+        },
+        {
+          "id": "65-0164/00751",
+          "status": "Not Compliant",
+          "comment": "given that there is no BUR the time is the time to reinstall",
+          "JIRA_ID": "IDUN-120023"
+        }
+      ]
+    },
+    {
+      "name": "Support GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Support+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00370",
+          "status": "Not Compliant",
+          "comment": "See JIRA for further gap analysis",
+          "JIRA_ID": "IDUN-119824"
+        },
+        {
+          "id": "65-0164/00391",
+          "status": "Fully Compliant",
+          "comment": "Given that no BUR is available, the rApp can be reinstalled in less than one hour as long as EIC can do that. If BUR is required, this requirement will have to be verified as part of the BUR solution."
+        },
+        {
+          "id": "65-0164/00393",
+          "status": "Fully Compliant",
+          "EIC_inherited": true
+        },
+        {
+          "id": "65-0164/00401",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-119852"
+        },
+        {
+          "id": "65-0164/00403",
+          "status": "Fully Compliant",
+          "comment": "Given that no BUR is available, the rApp can be reinstalled in less than one hour as long as EIC can do that. If BUR is required, this requirement will have to be verified as part of the BUR solution."
+        },
+        {
+          "id": "65-0164/00405",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-119861"
+        },
+        {
+          "id": "65-0164/00406",
+          "status": "Not Compliant",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-64655"
+        },
+        {
+          "id": "65-0164/00409",
+          "status": "Not Applicable",
+          "comment": "There is no subscriber to trace since this is not a Network Element."
+        },
+        {
+          "id": "65-0164/00410",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-119884"
+        },
+        {
+          "id": "65-0164/00412",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-119887"
+        },
+        {
+          "id": "65-0164/00424",
+          "status": "Fully Compliant"
+        },
+        {
+          "id": "65-0164/00456",
+          "status": "Not Applicable",
+          "comment": "The rApp does not handle traffic protocols or subscriber requests. This level of tracing is not applicable to the use case."
+        },
+        {
+          "id": "65-0164/00526",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00527",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00528",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00529",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00530",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00531",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00533",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00535",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00536",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00537",
+          "status": "Not Relevant"
+        }
+      ]
+    },
+    {
+      "name": "SW Change GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/SW+Change+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00386",
+          "status": "Not Relevant",
+          "comment": "Not Applicable for Cloud Native Products"
+        },
+        {
+          "id": "65-0164/00389",
+          "status": "Not Compliant",
+          "EIC_inherited": true,
+          "comment": "This is something that should be done by app manager, based on compatibility information supplied by the rApp.",
+          "JIRA_ID": "IDUN-120698"
+        },
+        {
+          "id": "65-0164/00392",
+          "status": "Partially Compliant",
+          "comment": "App manager requires multiple calls to update SW, new sw onboarding plus update. A single procedure should be provided by app manager.",
+          "EIC_inherited": true,
+          "JIRA_ID": "IDUN-120733"
+        },
+        {
+          "id": "65-0164/00394",
+          "status": "Fully Compliant",
+          "comment": "SW change is performed through app manager, that uses Helm. Helm does not provide progress reporting or remaining time."
+        },
+        {
+          "id": "65-0164/00396",
+          "status": "Fully Compliant",
+          "comment": "The rApp is at its first release. This requirement shall be verified at each release, and for the interfaces exposed. It is assumed it does not apply to bug fixing."
+        },
+        {
+          "id": "65-0164/00397",
+          "status": "Fully Compliant",
+          "comment": "The rApp is at its first release and there is no live EIC deployment. This requirement shall be verified at each rApp release, and taken as compatibility with n-x version of EIC."
+        },
+        {
+          "id": "65-0164/00422",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120735"
+        },
+        {
+          "id": "65-0164/00423",
+          "status": "Not Compliant",
+          "JIRa_ID": "IDUN-120736"
+        },
+        {
+          "id": "65-0164/00448",
+          "status": "Not Relevant",
+          "comment": "No HW dependency. Services run as containers on top of Kubernetes"
+        }
+      ]
+    },
+    {
+      "name": "Trade Compliance GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Trade+Compliance+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00292",
+          "status": "Not Relevant",
+          "comment": "this GPR is valid only for HW"
+        },
+        {
+          "id": "65-0164/00343",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121294"
+        },
+        {
+          "id": "65-0164/00407",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120739"
+        },
+        {
+          "id": "65-0164/00541",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121294"
+        },
+        {
+          "id": "65-0164/00542",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-120739"
+        },
+        {
+          "id": "65-0164/00543",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121294"
+        },
+        {
+          "id": "65-0164/00747",
+          "status": "Fully Compliant",
+          "comment": "The product contains unaltered commercial US origin 3PP(s)"
+        }
+      ]
+    },
+    {
+      "name": "User Experience GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/User+Experience+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00567",
+          "status": "Partially Compliant",
+          "comment": "no formal UX study has been performed, however the current development is based on competitor analysis and SL input",
+          "JIRA_ID": "IDUN-121543"
+        },
+        {
+          "id": "65-0164/00568",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121552"
+        },
+        {
+          "id": "65-0164/00569",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121553"
+        },
+        {
+          "id": "65-0164/00570",
+          "status": "Not Compliant",
+          "comment": "IDUN-120850"
+        },
+        {
+          "id": "65-0164/00571",
+          "status": "Not Compliant",
+          "JIRA_ID":  "IDUN-121569"
+        },
+        {
+          "id": "65-0164/00572",
+          "status": "Not Compliant",
+          "JIRA_ID":  "IDUN-121570"
+        },
+        {
+          "id": "65-0164/00573",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121631"
+
+        },
+        {
+          "id": "65-0164/00574",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121648"
+        },
+        {
+          "id": "65-0164/00575",
+          "status": "Not Compliant",
+          "JIRA_ID": "IDUN-121649"
+        }
+      ]
+    }
+  ]
+}

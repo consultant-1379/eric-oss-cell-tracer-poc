@@ -1,0 +1,24 @@
+{
+  "trcLevels": ["GNODEB", "CELL", "UE"],
+  "nwFunctions": ["DU", "CUCP", "CUUP", "UNRECOGNIZED"],
+  "eventTypes": [
+    {
+      "eId": 1,
+      "eventTypeName": "CuCpPerNgPagingRep",
+      "nwFunction": "CUCP",
+      "trcLevel": "GNODEB"
+    },
+    {
+      "eId": 2,
+      "eventTypeName": "CuCpXnConfigurationTransfer",
+      "nwFunction": "CUCP",
+      "trcLevel": "GNODEB"
+    },
+    {
+      "eId": 3,
+      "eventTypeName": "CuUpPerDrbSetup",
+      "nwFunction": "CUUP",
+      "trcLevel": "GNODEB"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "style": "",
+    "tile": {
+      "actions": [
+        {
+          "auto": {
+            "name": "refresh_sequence_diagram",
+            "trace": true
+          },
+          "footer": true,
+          "primary": true,
+          "title": "Refresh"
+        }
+      ],
+      "auto": {
+        "name": "sequence_plot"
+      },
+      "defaultTestData": false,
+      "linkWidgets": [
+        "trace_tree_select",
+        "trace_date_select"
+      ],
+      "subtitle": "",
+      "title": "Sequence Diagram"
+    }
+  },
+  "format": "csv",
+  "name": "sequence_diagram",
+  "systemTypes": [],
+  "type": "SequenceDiagram"
+}

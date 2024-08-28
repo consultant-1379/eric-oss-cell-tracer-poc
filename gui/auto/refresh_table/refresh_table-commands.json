@@ -1,0 +1,80 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 0,
+      "input": {
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "title": ""
+      },
+      "posX": -235.69,
+      "posY": 22.54,
+      "type": "start"
+    },
+    {
+      "edges": [
+        {
+          "id": 3
+        }
+      ],
+      "id": 2,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "event_records",
+        "title": "fetch-events"
+      },
+      "posX": -136,
+      "posY": 22.5,
+      "type": "fetch"
+    },
+    {
+      "edges": [
+        {
+          "id": 4
+        }
+      ],
+      "id": 3,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "private",
+          "sendType": "set",
+          "widgetName": "trace_table"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "plot",
+        "title": "plot"
+      },
+      "posX": -43.5,
+      "posY": 22.5,
+      "type": "widget"
+    },
+    {
+      "edges": [],
+      "id": 4,
+      "input": {
+        "config": {
+          "action": "put",
+          "dataFormat": "json",
+          "dataType": "items"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": "update-sample"
+      },
+      "posX": 45,
+      "posY": 22.5,
+      "type": "storage"
+    }
+  ]
+}

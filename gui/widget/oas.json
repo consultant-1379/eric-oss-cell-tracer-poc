@@ -1,0 +1,18 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "api": {
+      "format": "json"
+    },
+    "style": "",
+    "tile": {
+      "defaultTestData": true,
+      "subtitle": "",
+      "title": "oas"
+    }
+  },
+  "format": "csv",
+  "name": "oas",
+  "systemTypes": [],
+  "type": "Oas"
+}

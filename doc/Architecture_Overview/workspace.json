@@ -1,0 +1,716 @@
+{
+  "id" : 1,
+  "name" : "Name",
+  "description" : "Description",
+  "lastModifiedDate" : "2024-02-06T14:46:45Z",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlciA9IHBlcnNvbiAiTmV0d29yayB0cm91Ymxlc2hvb3RlciIKCiAgICAgICAgZWljID0gc29mdHdhcmVTeXN0ZW0gIkVyaWNzc29uIEludGVsbGlnZW50IENvbnRyb2xsZXIiIHsKICAgICAgICAgICAgZG1tID0gZ3JvdXAgIkRNTSIgewogICAgICAgICAgICAgICAga2Fma2EgPSBjb250YWluZXIgIkthZmthIiB7CiAgICAgICAgICAgICAgICAgICAgdGFncyAiQnVzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGNjID0gY29udGFpbmVyICJEQ0MiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJTZXJ2aWNlIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICB0aWMgPSBncm91cCAiVElDIiB7CiAgICAgICAgICAgICAgICBuY21wID0gY29udGFpbmVyICJOQ01QIiB7CiAgICAgICAgICAgICAgICAgICAgdGFncyAiU2VydmljZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGN0cyA9IGNvbnRhaW5lciAiQ1RTIiB7CiAgICAgICAgICAgICAgICAgICAgdGFncyAiU2VydmljZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgb3dsID0gY29udGFpbmVyICJDZWxsIFRyYWNlciByQXBwIGZyb250ZW5kIiB7CgogICAgICAgICAgICAgICAgb3dsRnJvbnRlbmRTZXJ2aWNlID0gY29tcG9uZW50ICJPV0wgRnJvbnRlbmQiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJTZXJ2aWNlIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIG93bEJhY2tlbmQgPSBncm91cCAiQmFja2VuZCIgewogICAgICAgICAgICAgICAgICAgIG93bEJhY2tlbmRTZXJ2aWNlID0gY29tcG9uZW50ICJPV0wgYmFja2VuZCIgewogICAgICAgICAgICAgICAgICAgICAgICB0YWdzICJTZXJ2aWNlIgogICAgICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICAgICAgb3dsRGIgPSBjb21wb25lbnQgIk9XTCBkYXRhIHN0b3JlIChSZWRpcykiIHsKICAgICAgICAgICAgICAgICAgICAgICAgdGFncyAiRGF0YWJhc2UiCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgfQoKICAgICAgICAgICAgcmFwcCA9IGNvbnRhaW5lciAiQ2VsbCBUcmFjZXIgckFwcCBiYWNrZW5kIiB7CiAgICAgICAgICAgICAgICBldmVudFN0cmVhbUNvbnN1bWVyID0gY29tcG9uZW50ICJDZWxsIHRyYWNlIEV2ZW50IENvbnN1bWVyIgogICAgICAgICAgICAgICAgY21DbGllbnQgPSBjb21wb25lbnQgIk5DTVAgQ2xpZW50IgogICAgICAgICAgICAgICAgZXZlbnRTZXJ2aWNlID0gY29tcG9uZW50ICJFdmVudCBSZXBvcnQgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIlNlcnZpY2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY2VsbFRyYWNlckRhdGFiYXNlID0gY29tcG9uZW50ICJDZWxsIFRyYWNlciBkYXRhYmFzZSIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkRhdGFiYXNlIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIHN1YnNjcmlwdGlvblNlcnZpY2UgPSBjb21wb25lbnQgInN1YnNjcmlwdGlvbiBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgdGFncyAiU2VydmljZSIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICB0b3BvbG9neVNlcnZpY2UgPSBjb21wb25lbnQgInRvcG9sb2d5IFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJTZXJ2aWNlIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGNtU2VydmljZSA9IGNvbXBvbmVudCAiQ00gU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIlNlcnZpY2UiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkY2NDbGllbnQgPSBjb21wb25lbnQgIkRDQyBjbGllbnQiCiAgICAgICAgICAgICAgICB0b3BvbG9neUNsaWVudCA9IGNvbXBvbmVudCAiVG9wb2xvZ3kgQ2xpZW50IgoKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgdXNlciAtPiBvd2xGcm9udGVuZFNlcnZpY2UgIltodHRwIG92ZXIgVExTXSByZXBvcnQgb24gZXZlbnRzLCBzZXQgdXAgc3Vic2NyaXB0aW9ucyIKCiAgICAgICAgb3dsRnJvbnRlbmRTZXJ2aWNlIC0+IG93bEJhY2tlbmRTZXJ2aWNlICJbaHR0cCBvdmVyIFRMU10gcmVwb3J0IG9uIGV2ZW50cywgc2V0IHVwIHN1YnNjcmlwdGlvbnMiCiAgICAgICAgb3dsQmFja2VuZFNlcnZpY2UgLT4gc3Vic2NyaXB0aW9uU2VydmljZSAiW1JFU1QsIHVuc2VjdXJlZF0gc2V0IHVwIHN1YnNjcmlwdGlvbiIKICAgICAgICBvd2xCYWNrZW5kU2VydmljZSAtPiBldmVudFNlcnZpY2UgIltSRVNULCB1bnNlY3VyZWRdIHJlcG9ydCBvbiBldmVudHMiCiAgICAgICAgb3dsQmFja2VuZFNlcnZpY2UgLT4gY21TZXJ2aWNlICJbUkVTVCwgdW5zZWN1cmVkXSByZXRyaWV2ZSBHbm9kZUIgYW5kIGNlbGwgbGlzdCIKICAgICAgICBvd2xCYWNrZW5kU2VydmljZSAtPiB0b3BvbG9neVNlcnZpY2UgIltSRVNULCB1bnNlY3VyZWRdIHJldHJpZXZlIGF2YWlsYWJsZSBHbm9kZUIgbGlzdCIKICAgICAgICBvd2xCYWNrZW5kU2VydmljZSAtPiBvd2xEYiAiW1JFRElTLCB1bnNlY3VyZWRdIGNhY2hlL3JldHJpZXZlIGRhdGEiCgogICAgICAgIHN1YnNjcmlwdGlvblNlcnZpY2UgLT4gY21DbGllbnQgIltKYXZhIEFQSV0gcmVmcmVzaCBDTSBpbmZvcm1hdGlvbiIKICAgICAgICBjbUNsaWVudCAtPiBuY21wICJbUkVTVCwgaHR0cCBvdmVyIFRMU10gZmV0Y2ggQ00gaW5mb3JtYXRpb24gKG5jaSwgZ05vZGViSWQpIgogICAgICAgIGNtQ2xpZW50IC0+IGNlbGxUcmFjZXJEYXRhYmFzZSAiW0pEQkMgb3ZlciBUTFNdIGNhY2hlIENNIGRhdGEiCiAgICAgICAgY21TZXJ2aWNlIC0+IGNlbGxUcmFjZXJEYXRhYmFzZSAiW0pEQkMgb3ZlciBUTFNdIHJldHJpZXZlIENNIGRhdGEiCiAgICAgICAgdG9wb2xvZ3lTZXJ2aWNlIC0+IHRvcG9sb2d5Q2xpZW50ICJbSmF2YSBBUEldIHJlZnJlc2ggbm9kZSBsaXN0IGZvciBzdWJzY3JpcHRpb24gc2V0dXAiCiAgICAgICAgc3Vic2NyaXB0aW9uU2VydmljZSAtPiBjZWxsVHJhY2VyRGF0YWJhc2UgIltKREJDIG92ZXIgVExTXSBzdG9yZSBzdWJzY3JpcHRpb24iCiAgICAgICAgc3Vic2NyaXB0aW9uU2VydmljZSAtPiBkY2NDbGllbnQgIltKYXZhIEFQSV0gc2V0IHVwIHN1YnNjcmlwdGlvbiIKICAgICAgICBkY2NDbGllbnQgLT4gZGNjICJbUkVTVCwgaHR0cCBvdmVyIFRMU10gc2V0IHVwIHN1YnNjcmlwdGlvbiIKICAgICAgICB0b3BvbG9neUNsaWVudCAtPiBjdHMgIltSRVNUIGh0dHAgb3ZlciBUTFNdIGNvbGxlY3QgYWxsIG5vZGUgbGlzdCIKCiAgICAgICAgZXZlbnRTdHJlYW1Db25zdW1lciAtPiBrYWZrYSAiW0thZmthLCB1bnNlY3VyZWRdIGxpc3RlbiB0byBjZWxsIHRyYWNlIGV2ZW50cyIKICAgICAgICBldmVudFN0cmVhbUNvbnN1bWVyIC0+IGNlbGxUcmFjZXJEYXRhYmFzZSAiW0pEQkMgb3ZlciBUTFNdIHN0b3JlIGV2ZW50cyIKICAgICAgICBldmVudFN0cmVhbUNvbnN1bWVyIC0+IHN1YnNjcmlwdGlvblNlcnZpY2UgIltKYXZhIEFQSV0gZmV0Y2ggZmlsdGVycyIKICAgICAgICBldmVudFNlcnZpY2UgLT4gY2VsbFRyYWNlckRhdGFiYXNlICJbSkRCQyBvdmVyIFRMU10gcmVhZCBldmVudHMiCgogICAgfQoKICAgIHZpZXdzIHsKCiAgICAgICAgc3lzdGVtQ29udGV4dCBlaWMgIlN5c3RlbVZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgZWljICJDb250YWluZXJWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IHJhcHAgIkJhY2tlbmRDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IG93bCAiRnJvbnRlbmRDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBwZXJzb24KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzAwMDA4MgogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwMDAwODIKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzAwNTBjYQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE3NGU2CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU2VydmljZSIgewogICAgICAgICAgICAgICAgc2hhcGUgcm91bmRlZEJveAogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBjeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkJ1cyIgewogICAgICAgICAgICAgICAgc2hhcGUgcGlwZQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKfQo="
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "name" : "Network troubleshooter",
+      "relationships" : [ {
+        "id" : "21",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3c60c5e4-c292-4a7e-b018-f7b8a546f331"
+        },
+        "sourceId" : "1",
+        "destinationId" : "8",
+        "description" : "[http over TLS] report on events, set up subscriptions"
+      }, {
+        "id" : "22",
+        "sourceId" : "1",
+        "destinationId" : "7",
+        "description" : "[http over TLS] report on events, set up subscriptions",
+        "linkedRelationshipId" : "21"
+      }, {
+        "id" : "23",
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "[http over TLS] report on events, set up subscriptions",
+        "linkedRelationshipId" : "21"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "eic"
+      },
+      "name" : "Ericsson Intelligent Controller",
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "4",
+        "tags" : "Element,Container,Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "dcc"
+        },
+        "name" : "DCC",
+        "group" : "DMM",
+        "documentation" : { }
+      }, {
+        "id" : "7",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "owl"
+        },
+        "name" : "Cell Tracer rApp frontend",
+        "relationships" : [ {
+          "id" : "27",
+          "sourceId" : "7",
+          "destinationId" : "16",
+          "description" : "[REST, unsecured] set up subscription",
+          "linkedRelationshipId" : "25"
+        }, {
+          "id" : "28",
+          "sourceId" : "7",
+          "destinationId" : "11",
+          "description" : "[REST, unsecured] set up subscription",
+          "linkedRelationshipId" : "25"
+        }, {
+          "id" : "30",
+          "sourceId" : "7",
+          "destinationId" : "14",
+          "description" : "[REST, unsecured] report on events",
+          "linkedRelationshipId" : "29"
+        }, {
+          "id" : "32",
+          "sourceId" : "7",
+          "destinationId" : "18",
+          "description" : "[REST, unsecured] retrieve GnodeB and cell list",
+          "linkedRelationshipId" : "31"
+        }, {
+          "id" : "34",
+          "sourceId" : "7",
+          "destinationId" : "17",
+          "description" : "[REST, unsecured] retrieve available GnodeB list",
+          "linkedRelationshipId" : "33"
+        } ],
+        "components" : [ {
+          "id" : "9",
+          "tags" : "Element,Component,Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "owlbackendservice"
+          },
+          "name" : "OWL backend",
+          "relationships" : [ {
+            "id" : "25",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "ddb3d704-441f-4f4d-b72b-affa40f8123f"
+            },
+            "sourceId" : "9",
+            "destinationId" : "16",
+            "description" : "[REST, unsecured] set up subscription"
+          }, {
+            "id" : "26",
+            "sourceId" : "9",
+            "destinationId" : "11",
+            "description" : "[REST, unsecured] set up subscription",
+            "linkedRelationshipId" : "25"
+          }, {
+            "id" : "29",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "669d9d82-9507-4857-86ae-a244ef8f93b3"
+            },
+            "sourceId" : "9",
+            "destinationId" : "14",
+            "description" : "[REST, unsecured] report on events"
+          }, {
+            "id" : "31",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "bf2ee0ab-42e9-4d71-92ee-2c1c829f0b54"
+            },
+            "sourceId" : "9",
+            "destinationId" : "18",
+            "description" : "[REST, unsecured] retrieve GnodeB and cell list"
+          }, {
+            "id" : "33",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "e25f42fa-649d-4179-8dfd-083d272bb6ac"
+            },
+            "sourceId" : "9",
+            "destinationId" : "17",
+            "description" : "[REST, unsecured] retrieve available GnodeB list"
+          }, {
+            "id" : "35",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "1c2d8976-e356-4e60-b0fb-50221b5d35aa"
+            },
+            "sourceId" : "9",
+            "destinationId" : "10",
+            "description" : "[REDIS, unsecured] cache/retrieve data"
+          } ],
+          "group" : "Backend",
+          "documentation" : { }
+        }, {
+          "id" : "8",
+          "tags" : "Element,Component,Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "owlfrontendservice"
+          },
+          "name" : "OWL Frontend",
+          "relationships" : [ {
+            "id" : "24",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "686d878d-15f7-4993-a2a6-470b18905fa3"
+            },
+            "sourceId" : "8",
+            "destinationId" : "9",
+            "description" : "[http over TLS] report on events, set up subscriptions"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "10",
+          "tags" : "Element,Component,Database",
+          "properties" : {
+            "structurizr.dsl.identifier" : "owldb"
+          },
+          "name" : "OWL data store (Redis)",
+          "group" : "Backend",
+          "documentation" : { }
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "11",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "rapp"
+        },
+        "name" : "Cell Tracer rApp backend",
+        "relationships" : [ {
+          "id" : "38",
+          "sourceId" : "11",
+          "destinationId" : "5",
+          "description" : "[REST, http over TLS] fetch CM information (nci, gNodebId)",
+          "linkedRelationshipId" : "37"
+        }, {
+          "id" : "45",
+          "sourceId" : "11",
+          "destinationId" : "4",
+          "description" : "[REST, http over TLS] set up subscription",
+          "linkedRelationshipId" : "44"
+        }, {
+          "id" : "47",
+          "sourceId" : "11",
+          "destinationId" : "6",
+          "description" : "[REST http over TLS] collect all node list",
+          "linkedRelationshipId" : "46"
+        }, {
+          "id" : "49",
+          "sourceId" : "11",
+          "destinationId" : "3",
+          "description" : "[Kafka, unsecured] listen to cell trace events",
+          "linkedRelationshipId" : "48"
+        } ],
+        "components" : [ {
+          "id" : "14",
+          "tags" : "Element,Component,Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "eventservice"
+          },
+          "name" : "Event Report Service",
+          "relationships" : [ {
+            "id" : "52",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "b12adff9-def4-414c-a06d-c19b87b77cb8"
+            },
+            "sourceId" : "14",
+            "destinationId" : "15",
+            "description" : "[JDBC over TLS] read events"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "17",
+          "tags" : "Element,Component,Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "topologyservice"
+          },
+          "name" : "topology Service",
+          "relationships" : [ {
+            "id" : "41",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "f7524802-bba8-4ac2-8184-0981f74e804f"
+            },
+            "sourceId" : "17",
+            "destinationId" : "20",
+            "description" : "[Java API] refresh node list for subscription setup"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "20",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "topologyclient"
+          },
+          "name" : "Topology Client",
+          "relationships" : [ {
+            "id" : "46",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "dab58bd2-2c7b-4f72-9cc7-6e85b2859cc9"
+            },
+            "sourceId" : "20",
+            "destinationId" : "6",
+            "description" : "[REST http over TLS] collect all node list"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "13",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "cmclient"
+          },
+          "name" : "NCMP Client",
+          "relationships" : [ {
+            "id" : "37",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "24561eed-4184-4c0f-a4f1-28cb257b0038"
+            },
+            "sourceId" : "13",
+            "destinationId" : "5",
+            "description" : "[REST, http over TLS] fetch CM information (nci, gNodebId)"
+          }, {
+            "id" : "39",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "7cd5e65b-5c12-40b7-a4c4-85debceae7fd"
+            },
+            "sourceId" : "13",
+            "destinationId" : "15",
+            "description" : "[JDBC over TLS] cache CM data"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "16",
+          "tags" : "Element,Component,Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "subscriptionservice"
+          },
+          "name" : "subscription Service",
+          "relationships" : [ {
+            "id" : "36",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "a68dc9d1-eefa-403f-9c77-3e198149f0e2"
+            },
+            "sourceId" : "16",
+            "destinationId" : "13",
+            "description" : "[Java API] refresh CM information"
+          }, {
+            "id" : "42",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "f124fc36-0249-4087-af00-150d6bd30661"
+            },
+            "sourceId" : "16",
+            "destinationId" : "15",
+            "description" : "[JDBC over TLS] store subscription"
+          }, {
+            "id" : "43",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "0d456c61-dfb2-4df0-a449-e4ee5544b658"
+            },
+            "sourceId" : "16",
+            "destinationId" : "19",
+            "description" : "[Java API] set up subscription"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "19",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dccclient"
+          },
+          "name" : "DCC client",
+          "relationships" : [ {
+            "id" : "44",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "e45c3b28-f86a-48ac-8fab-35f7e42e9159"
+            },
+            "sourceId" : "19",
+            "destinationId" : "4",
+            "description" : "[REST, http over TLS] set up subscription"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "18",
+          "tags" : "Element,Component,Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "cmservice"
+          },
+          "name" : "CM Service",
+          "relationships" : [ {
+            "id" : "40",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "24020ec5-a458-46ca-8482-92b8c029cbba"
+            },
+            "sourceId" : "18",
+            "destinationId" : "15",
+            "description" : "[JDBC over TLS] retrieve CM data"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "12",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "eventstreamconsumer"
+          },
+          "name" : "Cell trace Event Consumer",
+          "relationships" : [ {
+            "id" : "48",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "e7f7c7af-4223-4bfa-ad97-01f28fc5e814"
+            },
+            "sourceId" : "12",
+            "destinationId" : "3",
+            "description" : "[Kafka, unsecured] listen to cell trace events"
+          }, {
+            "id" : "50",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "1d58a1f4-06bd-4f5c-9fcc-a38e4616872e"
+            },
+            "sourceId" : "12",
+            "destinationId" : "15",
+            "description" : "[JDBC over TLS] store events"
+          }, {
+            "id" : "51",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "6fc23427-c649-4cb3-b3ef-1bada0f9481f"
+            },
+            "sourceId" : "12",
+            "destinationId" : "16",
+            "description" : "[Java API] fetch filters"
+          } ],
+          "documentation" : { }
+        }, {
+          "id" : "15",
+          "tags" : "Element,Component,Database",
+          "properties" : {
+            "structurizr.dsl.identifier" : "celltracerdatabase"
+          },
+          "name" : "Cell Tracer database",
+          "documentation" : { }
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "6",
+        "tags" : "Element,Container,Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "cts"
+        },
+        "name" : "CTS",
+        "group" : "TIC",
+        "documentation" : { }
+      }, {
+        "id" : "3",
+        "tags" : "Element,Container,Bus",
+        "properties" : {
+          "structurizr.dsl.identifier" : "kafka"
+        },
+        "name" : "Kafka",
+        "group" : "DMM",
+        "documentation" : { }
+      }, {
+        "id" : "5",
+        "tags" : "Element,Container,Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ncmp"
+        },
+        "name" : "NCMP",
+        "group" : "TIC",
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemContextViews" : [ {
+      "key" : "SystemView",
+      "order" : 1,
+      "softwareSystemId" : "2",
+      "paperSize" : "A6_Portrait",
+      "dimensions" : {
+        "width" : 866,
+        "height" : 1416
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 233,
+        "y" : 208
+      }, {
+        "id" : "2",
+        "x" : 208,
+        "y" : 908
+      } ],
+      "relationships" : [ {
+        "id" : "23"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "ContainerView",
+      "order" : 2,
+      "softwareSystemId" : "2",
+      "paperSize" : "A3_Landscape",
+      "dimensions" : {
+        "width" : 3579,
+        "height" : 2825
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 1562,
+        "y" : 1508
+      }, {
+        "id" : "1",
+        "x" : 1587,
+        "y" : 208
+      }, {
+        "id" : "3",
+        "x" : 1183,
+        "y" : 2108
+      }, {
+        "id" : "4",
+        "x" : 433,
+        "y" : 2108
+      }, {
+        "id" : "5",
+        "x" : 2695,
+        "y" : 2108
+      }, {
+        "id" : "6",
+        "x" : 1945,
+        "y" : 2108
+      }, {
+        "id" : "7",
+        "x" : 1562,
+        "y" : 908
+      } ],
+      "relationships" : [ {
+        "id" : "28",
+        "vertices" : [ {
+          "x" : 1790,
+          "y" : 1365
+        } ]
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "45",
+        "vertices" : [ {
+          "x" : 1033,
+          "y" : 2004
+        } ]
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "38",
+        "vertices" : [ {
+          "x" : 2545,
+          "y" : 2004
+        } ]
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "BackendComponentView",
+      "order" : 3,
+      "dimensions" : {
+        "width" : 4158,
+        "height" : 3062
+      },
+      "containerId" : "11",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "12",
+        "x" : 305,
+        "y" : 765
+      }, {
+        "id" : "13",
+        "x" : 1285,
+        "y" : 1420
+      }, {
+        "id" : "14",
+        "x" : 2470,
+        "y" : 765
+      }, {
+        "id" : "15",
+        "x" : 2465,
+        "y" : 1445
+      }, {
+        "id" : "16",
+        "x" : 1360,
+        "y" : 780
+      }, {
+        "id" : "17",
+        "x" : 3155,
+        "y" : 775
+      }, {
+        "id" : "18",
+        "x" : 1810,
+        "y" : 1730
+      }, {
+        "id" : "19",
+        "x" : 1810,
+        "y" : 1730
+      }, {
+        "id" : "3",
+        "x" : 300,
+        "y" : 2355
+      }, {
+        "id" : "4",
+        "x" : 1806,
+        "y" : 2355
+      }, {
+        "id" : "5",
+        "x" : 1285,
+        "y" : 2350
+      }, {
+        "id" : "6",
+        "x" : 3181,
+        "y" : 2335
+      }, {
+        "id" : "7",
+        "x" : 1810,
+        "y" : 70
+      }, {
+        "id" : "20",
+        "x" : 3175,
+        "y" : 1415
+      } ],
+      "relationships" : [ {
+        "id" : "50"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "40"
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "30"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "44"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "39"
+      } ]
+    }, {
+      "key" : "FrontendComponentView",
+      "order" : 4,
+      "paperSize" : "A4_Landscape",
+      "dimensions" : {
+        "width" : 2712,
+        "height" : 2016
+      },
+      "containerId" : "7",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 1070,
+        "y" : 1500
+      }, {
+        "id" : "1",
+        "x" : 354,
+        "y" : 208
+      }, {
+        "id" : "8",
+        "x" : 330,
+        "y" : 910
+      }, {
+        "id" : "9",
+        "x" : 1070,
+        "y" : 915
+      }, {
+        "id" : "10",
+        "x" : 1829,
+        "y" : 908
+      } ],
+      "relationships" : [ {
+        "id" : "26"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "21"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Person",
+          "background" : "#000082",
+          "color" : "#ffffff",
+          "shape" : "Person"
+        }, {
+          "tag" : "SoftwareSystem",
+          "background" : "#000082",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Container",
+          "background" : "#0050ca",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Component",
+          "background" : "#1174e6",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Service",
+          "shape" : "RoundedBox"
+        }, {
+          "tag" : "Database",
+          "shape" : "Cylinder"
+        }, {
+          "tag" : "Bus",
+          "shape" : "Pipe"
+        } ]
+      },
+      "terminology" : { },
+      "lastSavedView" : "ContainerView"
+    }
+  }
+}

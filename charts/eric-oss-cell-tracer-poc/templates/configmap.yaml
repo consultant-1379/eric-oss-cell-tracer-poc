@@ -1,0 +1,135 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "eric-oss-cell-tracer-poc.name" . }}-configmap
+  labels:
+  {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+data:
+  {{- range $path, $_ := (.Files.Glob "resources/*") }}
+  {{ trimPrefix "resources/" $path }}: |
+  {{- tpl ($.Files.Get $path) $ | nindent 4 }}
+  {{- end }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "eric-oss-cell-tracer-poc.name" . }}-dashboard
+  labels:
+    {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+    ericsson.com/cnom-server-dashboard-models: "true"
+  annotations:
+    {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+data:
+  dashboard.json: |
+    {
+      "namespace":"CELL_TRACE",
+      "dashboards": [
+        {
+          "_id": "red_metrics",
+          "title": "RED Metrics for CellTrace rApp",
+          "apps": ["statusOverview"],
+          "dashboardTreeView": {
+            "tree": [["rApp", "CellTrace Metrics"]]
+          },
+          "tiles": [
+            {
+              "xSize": 5,
+              "widget": "system_cpu_usage"
+            },
+            {
+              "xSize": 5,
+              "widget": "jvm_memory_bytes_used"
+            },
+            {
+              "xSize": 5,
+              "widget": "kafka_nr_event_batches_total"
+            },
+            {
+              "xSize": 5,
+              "widget": "kafka_producer_record_send_total"
+            },
+            {
+              "xSize": 10,
+              "ySize": 3,
+              "variables":
+              {
+                "podListFilterProp": "metadata.name",
+                "podListFilterRegex": "^{{ include "eric-oss-cell-tracer-poc.name" . }}-.*$"
+              },
+              "widget": "builtin:pod_table_no_resource_usage"
+            }
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "_id": "system_cpu_usage",
+          "widgetType": "timeline",
+          "title": "CPU Usage",
+          "sources": [{ "source": "system_cpu_usage" }]
+        },
+        {
+          "_id": "jvm_memory_bytes_used",
+          "widgetType": "timeline",
+          "title": "Memory Usage",
+          "sources": [{ "source": "jvm_memory_bytes_used" }]
+        },
+        {
+          "_id": "kafka_nr_event_batches_total",
+          "widgetType": "timeline",
+          "title": "Consumed NR Event Messages",
+          "sources": [{ "source": "kafka_nr_event_batches_total" }]
+        },
+        {
+          "_id": "kafka_producer_record_send_total",
+          "widgetType": "timeline",
+          "title": "Generated NR Event Messages",
+          "sources": [{ "source": "kafka_producer_record_send_total" }]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "system_cpu_usage",
+          "sourceType": "prometheus",
+          "query": "sum(system_cpu_usage{app_kubernetes_io_instance='{{ .Release.Name }}', job='{{ include "eric-oss-cell-tracer-poc.name" . }}'}) by (pod_name)",
+          "splitByLabelName": "pod_name"
+        },
+        {
+          "_id": "jvm_memory_bytes_used",
+          "sourceType": "prometheus",
+          "query": "sum(jvm_memory_bytes_used{app_kubernetes_io_instance='{{ .Release.Name }}', job='{{ include "eric-oss-cell-tracer-poc.name" . }}', area='heap'}) by (pod_name) or sum(jvm_memory_used_bytes{app_kubernetes_io_instance='{{ .Release.Name }}', job='{{ include "eric-oss-cell-tracer-poc.name" . }}', area='heap'}) by (pod_name)",
+          "splitByLabelName": "pod_name"
+        },
+        {
+          "_id": "kafka_nr_event_batches_total",
+          "sourceType": "prometheus",
+          "query": "sum(kafka_nr_event_batches_total{app_kubernetes_io_instance='{{ .Release.Name }}', job='{{ include "eric-oss-cell-tracer-poc.name" . }}'}) by (pod_name)",
+          "splitByLabelName": "pod_name"
+        },
+        {
+          "_id": "kafka_producer_record_send_total",
+          "sourceType": "prometheus",
+          "query": "sum(kafka_producer_record_send_total{app_kubernetes_io_instance='{{ .Release.Name }}', job='{{ include "eric-oss-cell-tracer-poc.name" . }}'}) by (pod_name)",
+          "splitByLabelName": "pod_name"
+        }
+      ]
+    }

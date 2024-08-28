@@ -1,0 +1,177 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 3
+        }
+      ],
+      "id": 0,
+      "input": {
+        "config": {
+          "argsSchema": {},
+          "showDialog": false
+        },
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": -403.36,
+      "posY": 45.13,
+      "type": "start"
+    },
+    {
+      "edges": [],
+      "id": 2,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "private",
+          "sendType": "set",
+          "widgetName": "trace_tree_select"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "filters",
+        "title": "plot-tree-select"
+      },
+      "posX": 199.83,
+      "posY": -81.77,
+      "type": "widget"
+    },
+    {
+      "edges": [
+        {
+          "id": 5
+        }
+      ],
+      "id": 3,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "filters",
+        "title": "fetch-filters"
+      },
+      "posX": -277,
+      "posY": 45,
+      "type": "fetch"
+    },
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 4,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "cm",
+        "title": "fetch-cm"
+      },
+      "posX": 19.79,
+      "posY": -81.3,
+      "type": "fetch"
+    },
+    {
+      "edges": [
+        {
+          "id": 8
+        }
+      ],
+      "id": 1,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "private",
+          "sendType": "set",
+          "widgetName": "trace_tree_subscription"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "subscription",
+        "title": "plot-tree-subscription"
+      },
+      "posX": 222.4,
+      "posY": 148.06,
+      "type": "widget"
+    },
+    {
+      "edges": [
+        {
+          "id": 4
+        },
+        {
+          "id": 7
+        }
+      ],
+      "id": 5,
+      "input": {
+        "config": {},
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": ""
+      },
+      "posX": -171,
+      "posY": 42.5,
+      "type": "script"
+    },
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 6,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "subscription",
+        "title": "fetch-subscription"
+      },
+      "posX": 88.09,
+      "posY": 146.51,
+      "type": "fetch"
+    },
+    {
+      "edges": [],
+      "id": 8,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "public",
+          "sendType": "set",
+          "widgetName": "trace_form"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "set_trace_form",
+        "title": "set-trace-form"
+      },
+      "posX": 368.17,
+      "posY": 146.69,
+      "type": "widget"
+    },
+    {
+      "edges": [
+        {
+          "id": 6
+        }
+      ],
+      "id": 7,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "topology",
+        "title": "fetch-nodes"
+      },
+      "posX": -56,
+      "posY": 149,
+      "type": "fetch"
+    }
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "blocks": [
+    {
+      "title": "UE"
+    },
+    {
+      "title": "RC"
+    },
+    {
+      "title": "RP"
+    },
+    {
+      "title": "PP"
+    },
+    {
+      "title": "ENODEB"
+    },
+    {
+      "title": "GNODEB"
+    }
+  ],
+  "rows": [
+    {
+      "date": 1707215700000,
+      "message": "CuCpProcEndcMnHoKeepSn - MDAwMDAwMDU= / 16386",
+      "start": 1,
+      "end": 4,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "16386",
+        "gnbId": "1",
+        "cause3gpp": "5326322649248357067",
+        "ueGroupId": "580128786265912482",
+        "globalEnbId": {
+          "enbId": "-4638883682764103935"
+        },
+        "globalGnbId": {
+          "gnbId": "1"
+        },
+        "gnbIdLength": "22",
+        "keepSnResult": 338475979,
+        "menbUeX2apId": "-7267180265144329538",
+        "sgnbUeX2apId": "-7731462527274333060",
+        "prefUeGroupId": "7572782997720724586",
+        "timeStampStop": "-7094468068793128126",
+        "causeGroup3gpp": -789070078,
+        "timeStampStart": "-4748358479082707919",
+        "noOfScellsToAdd": "1007555106684752149",
+        "ueServiceGroupId": "165798679219475783",
+        "ueMobilityGroupId": "7081801004009507522",
+        "selectPsCellResult": 1865261934,
+        "targetCellIdentity": "-6800134700199627412",
+        "ueAdmissionGroupId": "2408004694353520487",
+        "noOfScellsToRelease": "-1721196434973506753",
+        "ueAdmissionPriority": "-7367380799599646752",
+        "menbUeX2apIdExtension": "8212205352139250270",
+        "isMenbUeX2apIdExtensionSet": -744642740,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "ENODEB"
+      }
+    },
+    {
+      "date": 1707215760000,
+      "message": "CuUpProcSnNrdcUlPrimaryCgSwitch - MDAwMDAwMTA= / undefined",
+      "start": 3,
+      "end": 5,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "gnbId": "3",
+        "gnbIdLength": "22",
+        "timeStampStop": "-4838117920714588015",
+        "timeStampStart": "1058952526719555799",
+        "snNrdcUlPrimaryCgSwitchType": 1824951761,
+        "snNrdcUlPrimaryCgSwitchCause": 915296587,
+        "snNrdcUlPrimaryCgSwitchResult": -1980079782,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "PP",
+        "networkElement_2": "GNODEB"
+      }
+    },
+    {
+      "date": 1707215920001,
+      "message": "CuUpPerUeRbCgTrafficRepAggr10 - MDAwMDAwMDc= / undefined",
+      "start": 3,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "gnbId": "6",
+        "nrType": -1935747844,
+        "qosValue": "-167885730524958550",
+        "ueGroupId": "2818517680934561261",
+        "gnbIdLength": "22",
+        "lastTimeStamp": "3899741886324459877",
+        "prefUeGroupId": "4765075071605135204",
+        "ueServiceGroupId": "8516528816379729956",
+        "ueMobilityGroupId": "4804084248667953465",
+        "perRbCgRpuVolRecUl": "-1694783153133139413",
+        "ueAdmissionGroupId": "582119640634903450",
+        "perRbCgRpuVolTransDl": "2746989241534039508",
+        "numOfAggregatedEvents": "8099979915178793733",
+        "perRbCgRpuPacketRecUl": "-5237980416576129062",
+        "perRbCgRpuSwitchToMcg": "-4794565267078688161",
+        "perRbCgRpuSwitchToScg": "-3128420272228665997",
+        "perRbCgRpuPacketLossUl": "4672433029010564658",
+        "perRbCgRpuPacketTransDl": "-7771300887898959616",
+        "perRbCgRpuPacketLossUlTo": "-3581075550420886390",
+        "perRbCgRpuPacketRecUlOoo": "-2298228485105199876",
+        "perRbCgRpuVolTransDlAggr": "617189662771004779",
+        "perRbCgRpuPacketTransDlAck": "-7116529718146323612",
+        "perRbCgRpuPacketTransDlDisc": "-3758321679654915806",
+        "perRbCgRpuPacketLossUlToDisc": "-7216359497931550918",
+        "perRbCgRpuPacketTransDlDiscAqm": "1326634973105178603",
+        "perRbCgRpuPacketDiscOverlDlRohc": "492926413741371804",
+        "perRbCgRpuHdrVolRecDlRohcProfile1": "7830028867000074426",
+        "perRbCgRpuHdrVolRecDlRohcProfile2": "-2317076407365535282",
+        "perRbCgRpuPacketRecUlRohcProfile0": "-5738853485602064100",
+        "perRbCgRpuPacketRecUlRohcProfile1": "-5827090338538224485",
+        "perRbCgRpuPacketRecUlRohcProfile2": "1388282375910965670",
+        "perRbCgRpuHdrVolTransUlRohcProfile1": "-457112246358890037",
+        "perRbCgRpuHdrVolTransUlRohcProfile2": "1210033231312349320",
+        "perRbCgRpuPacketTransDlRohcProfile0": "-981261886383069152",
+        "perRbCgRpuPacketTransDlRohcProfile1": "8058951195138745325",
+        "perRbCgRpuPacketTransDlRohcProfile2": "-5648106443147652010",
+        "perRbCgRpuCmpHdrVolRecUlRohcProfile1": "1282378635546458216",
+        "perRbCgRpuCmpHdrVolRecUlRohcProfile2": "1674084292433445352",
+        "perRbCgRpuCmpHdrVolTransDlRohcProfile1": "-7837950195727116076",
+        "perRbCgRpuCmpHdrVolTransDlRohcProfile2": "7314076204812145092",
+        "perRbCgRpuPacketLostUlRohcFailProfile1": "-6847734019527209621",
+        "perRbCgRpuPacketLostUlRohcFailProfile2": "-7845324134759045378",
+        "perRbCgRpuPacketTransDlRohcCtxtRefresh": "-5969394034050049196",
+        "perRbCgRpuPacketUncmpHdrOverlTransDlRohcProfile1": "7156814178861103683",
+        "perRbCgRpuPacketUncmpHdrOverlTransDlRohcProfile2": "3488800780984115528",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "PP",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707215925001,
+      "message": "CuCpPerCellDrbSetup - MDAwMDAwMDY= / 81933",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "81933",
+        "gnbId": "5",
+        "gnbIdLength": "22",
+        "numOfDrbSetupEndc": "-1079643762651135835",
+        "numOfDrbSetupNrdc": "-3210848112367399599",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707215935000,
+      "message": "CuCpProcDuInitiatedUeCtxtMod - MDAwMDAwMDI= / 65547",
+      "start": 1,
+      "end": 4,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "65547",
+        "gnbId": "4",
+        "globalGnbId": {
+          "gnbId": "4"
+        },
+        "gnbIdLength": "22",
+        "timeStampStop": "-3168848078862468890",
+        "timeStampStart": "-2481110233529327119",
+        "duInitiatedUeCtxtModResult": -106429739,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "ENODEB"
+      }
+    },
+    {
+      "date": 1707215950001,
+      "message": "CuCpPerNrCellCuCaConfiguredDl - MDAwMDAwMDU= / 114709",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "114709",
+        "gnbId": "7",
+        "gnbIdLength": "22",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707215970001,
+      "message": "CuCpMnNrdcSetupBufMonConfig - MDAwMDAwMDk= / 98322",
+      "start": 1,
+      "end": 5,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "98322",
+        "gnbId": "6",
+        "gnbDuId": "1",
+        "ueGroupId": "2718013175037113624",
+        "globalGnbId": {
+          "gnbId": "6"
+        },
+        "gnbIdLength": "22",
+        "prefUeGroupId": "4225129725418293125",
+        "bufMonConfigType": -1594362319,
+        "ueServiceGroupId": "5641073500334083152",
+        "sduDlAgeThreshold": "1657769428708392391",
+        "sduDlVolThreshold": "8092040641595223754",
+        "ueMobilityGroupId": "6233948585478693776",
+        "ueAdmissionGroupId": "4668520819650225200",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "GNODEB"
+      }
+    },
+    {
+      "date": 1707215980000,
+      "message": "CuCpEcgiMeasurement - MDAwMDAwMDY= / 16387",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "16387",
+        "gnbId": "1",
+        "measId": "-4300630193971066592",
+        "measType": -1743430693,
+        "measMethod": -2086462186,
+        "measStatus": -747583833,
+        "globalGnbId": {
+          "gnbId": "1"
+        },
+        "gnbIdLength": "22",
+        "neighborPci": "8738868913884338222",
+        "neighborArfcn": "-2846547137999973626",
+        "neighborEutraCgi": {
+          "cellIdentity": "-4482719343386508529"
+        },
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707215995000,
+      "message": "CuCpPerNrCellCuCaConfiguredDl - MDAwMDAwMDI= / 32772",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "32772",
+        "gnbId": "2",
+        "gnbIdLength": "22",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216010000,
+      "message": "CuCpPerCuCpRrcConnectedUe - MDAwMDAwMDc= / undefined",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "gnbId": "5",
+        "gnbIdLength": "22",
+        "numOfNrRrcConnectedSa": "-858277280417092230",
+        "numOfNrRrcConnectedEndc": "3094477096435356359",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216015001,
+      "message": "CuUpPerNfTrafficRep - MDAwMDAwMDE= / undefined",
+      "start": 3,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "gnbId": "1",
+        "cuupId": "1",
+        "gnbIdLength": "22",
+        "perCuupRohcCidDl": "-7204973525824048644",
+        "perCuupRohcCidUl": "2675562347634189631",
+        "perCuupPacketDisc": "7619858674063974626",
+        "perCuupSwitchToNr": "-3985076714387722411",
+        "perCuupSwitchToLte": "-252272202290227253",
+        "perCuupRohcCidDlMax": "8914104323199602320",
+        "perCuupRohcCidUlMax": "201721369294188686",
+        "perCuupPacketDiscGtpu": "1873934022826907189",
+        "perCuupPdcpRecDlInact": "5610451095455726206",
+        "perCuupPdcpDiscDlInact": "2243341142564401274",
+        "perCuupPacketDiscNoCtxt": "-5830464075360084094",
+        "perCuupTestModePdcpPacketGenerated": "1421889122504763439",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "PP",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216035000,
+      "message": "CuCpProcPduSessionResourceSetup - MDAwMDAwMDM= / 16387",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "16387",
+        "gnbId": "1",
+        "cause3gpp": "-100468148583612873",
+        "ueGroupId": "3344407034552304554",
+        "globalGnbId": {
+          "gnbId": "1"
+        },
+        "gnbIdLength": "22",
+        "uePowerClass": -1150757021,
+        "prefUeGroupId": "8892940566756196602",
+        "timeStampStop": "4195219366531491840",
+        "causeGroup3gpp": -1219792444,
+        "connectedGuami": {
+          "amfSetId": "3646236746484072759",
+          "amfPointer": "4368018499067446120",
+          "amfRegionId": "3047511661431578253"
+        },
+        "timeStampStart": "827454178151679121",
+        "noOfScellsToAdd": "5765490614533358199",
+        "ueServiceGroupId": "6520629809102210859",
+        "ueMobilityGroupId": "-2383932297266335521",
+        "limitedServiceMode": -215095397,
+        "ueAdmissionGroupId": "-252999228917107540",
+        "pduSessionResourceSetupResult": -165799594,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216045000,
+      "message": "DuCellLockUnlock - MDAwMDAwMDg= / 32772",
+      "start": 2,
+      "end": 1,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "32772",
+        "gnbId": "2",
+        "gnbDuId": "1",
+        "downType": -1900064682,
+        "gnbIdLength": "22",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RP",
+        "networkElement_2": "RC"
+      }
+    },
+    {
+      "date": 1707216075000,
+      "message": "CuCpProcMnNrdcModification - MDAwMDAwMDg= / 114708",
+      "start": 1,
+      "end": 5,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "114708",
+        "gnbId": "7",
+        "cause3gpp": "-7634892180318231635",
+        "globalGnbId": {
+          "gnbId": "7"
+        },
+        "gnbIdLength": "22",
+        "timeStampStop": "6479464034888353573",
+        "causeGroup3gpp": -326923381,
+        "timeStampStart": "-1739894264048449728",
+        "globalRemoteGnbId": {
+          "gnbId": "7"
+        },
+        "mnNrdcModificationResult": 101882140,
+        "mnNrdcModificationInitiatingNode": 1820810874,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "GNODEB"
+      }
+    },
+    {
+      "date": 1707216090000,
+      "message": "CuCpProcXnRetrieveUeCtxt - MDAwMDAwMDY= / 16385",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "16385",
+        "cause": "4407923366689692841",
+        "gnbId": "1",
+        "guami": {
+          "amfSetId": "6516056323225377058",
+          "amfPointer": "-1302661199651701649",
+          "amfRegionId": "-1206497111646194913"
+        },
+        "ueGroupId": "-8742580075007904365",
+        "causeGroup": -1007985394,
+        "globalGnbId": {
+          "gnbId": "1"
+        },
+        "gnbIdLength": "22",
+        "uePowerClass": -1105319282,
+        "prefUeGroupId": "-1547277218379235068",
+        "timeStampStop": "28667187586564427",
+        "procedureState": -1001318496,
+        "timeStampStart": "-765782383761556050",
+        "rrcProcedureType": 1506042928,
+        "globalRemoteGnbId": {
+          "gnbId": "1"
+        },
+        "noOfScellsToRelease": "5914985653578073273",
+        "newNgRanNodeUeXnapId": "-7836891003450546758",
+        "oldNgRanNodeUeXnapId": "1397233953606117512",
+        "retrieveUeCtxtResult": 1992981000,
+        "newNgRanNodeGlobalGnbId": {
+          "gnbId": "1"
+        },
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216105000,
+      "message": "CuCpMeasurementConfigurationSa - MDAwMDAwMDA= / 65548",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "65548",
+        "gnbId": "4",
+        "globalGnbId": {
+          "gnbId": "4"
+        },
+        "gnbIdLength": "22",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216110000,
+      "message": "CuCpMnNrdcSetupBufMonConfig - MDAwMDAwMDA= / 49159",
+      "start": 1,
+      "end": 5,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "49159",
+        "gnbId": "3",
+        "gnbDuId": "1",
+        "ueGroupId": "-4384225333790332624",
+        "globalGnbId": {
+          "gnbId": "3"
+        },
+        "gnbIdLength": "22",
+        "prefUeGroupId": "1703353250326464966",
+        "bufMonConfigType": 205685110,
+        "ueServiceGroupId": "1719853957282226631",
+        "sduDlAgeThreshold": "1969867088001382132",
+        "sduDlVolThreshold": "-5749052798774222548",
+        "ueMobilityGroupId": "2210642220909375746",
+        "ueAdmissionGroupId": "4850722815290910361",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "GNODEB"
+      }
+    },
+    {
+      "date": 1707216115000,
+      "message": "CuCpProcMnNrdcRelease - MDAwMDAwMDk= / 65548",
+      "start": 1,
+      "end": 5,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "65548",
+        "cause": "-7714440317152403846",
+        "gnbId": "4",
+        "causeGroup": 1235233870,
+        "globalGnbId": {
+          "gnbId": "4"
+        },
+        "gnbIdLength": "22",
+        "overheating": 155778307,
+        "timeStampStop": "-8180203089659841126",
+        "timeStampStart": "503544974376918405",
+        "globalRemoteGnbId": {
+          "gnbId": "4"
+        },
+        "intraCellHandover": -378167951,
+        "mnNrdcReleaseResult": 1452603481,
+        "globalSecondaryGnbId": {
+          "gnbId": "4"
+        },
+        "mnReleaseWithRelocation": -160249596,
+        "mnNrdcReleaseInitiatingNode": 1815909236,
+        "mnNrdcReleaseInitiatingMessage": -757443286,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "GNODEB"
+      }
+    },
+    {
+      "date": 1707216120001,
+      "message": "CuUpPerUeRbCgTrafficRep - MDAwMDAwMDI= / undefined",
+      "start": 3,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "gnbId": "5",
+        "nrType": 431692904,
+        "qosValue": "-4151224158737719671",
+        "ueGroupId": "-5988566409764382836",
+        "gnbIdLength": "22",
+        "prefUeGroupId": "-5539050407014535374",
+        "ueServiceGroupId": "3835481046610849350",
+        "ueMobilityGroupId": "6471101596357751012",
+        "perRbCgRpuVolRecUl": "5086846682417103190",
+        "ueAdmissionGroupId": "-218226649100945350",
+        "perRbCgRpuVolTransDl": "6542315830431403235",
+        "perRbCgRpuPacketRecUl": "-5197874893943812174",
+        "perRbCgRpuSwitchToMcg": "7380974203757096198",
+        "perRbCgRpuSwitchToScg": "-1142220923745560560",
+        "perRbCgRpuPacketLossUl": "3185945442491542299",
+        "perRbCgRpuPacketTransDl": "8436826575809325382",
+        "perRbCgRpuPacketLossUlTo": "1776767754931417601",
+        "perRbCgRpuPacketRecUlOoo": "3883709144568169590",
+        "perRbCgRpuVolTransDlAggr": "-7282470072499071039",
+        "perRbCgRpuPacketTransDlAck": "-1639357540681730759",
+        "perRbCgRpuPacketTransDlDisc": "4002014709025085258",
+        "perRbCgRpuPacketLossUlToDisc": "6284062842758404971",
+        "perRbCgRpuPacketTransDlDiscAqm": "-5892170436827998437",
+        "perRbCgRpuPacketDiscOverlDlRohc": "-2442545563985581967",
+        "perRbCgRpuHdrVolRecDlRohcProfile1": "7456347303287229822",
+        "perRbCgRpuHdrVolRecDlRohcProfile2": "-8275141630346864512",
+        "perRbCgRpuPacketRecUlRohcProfile0": "906919409094545028",
+        "perRbCgRpuPacketRecUlRohcProfile1": "1042360529279011451",
+        "perRbCgRpuPacketRecUlRohcProfile2": "-7986259544407472175",
+        "perRbCgRpuHdrVolTransUlRohcProfile1": "8097484686226531587",
+        "perRbCgRpuHdrVolTransUlRohcProfile2": "3087852011372947364",
+        "perRbCgRpuPacketTransDlRohcProfile0": "6659172571393624024",
+        "perRbCgRpuPacketTransDlRohcProfile1": "-2351628070215184822",
+        "perRbCgRpuPacketTransDlRohcProfile2": "408912033188314659",
+        "perRbCgRpuCmpHdrVolRecUlRohcProfile1": "-5705957962733494409",
+        "perRbCgRpuCmpHdrVolRecUlRohcProfile2": "-328169602300968191",
+        "perRbCgRpuCmpHdrVolTransDlRohcProfile1": "-1329009433045288087",
+        "perRbCgRpuCmpHdrVolTransDlRohcProfile2": "-7253212711207936458",
+        "perRbCgRpuPacketLostUlRohcFailProfile1": "-6244840172709034286",
+        "perRbCgRpuPacketLostUlRohcFailProfile2": "8756637043897785881",
+        "perRbCgRpuPacketTransDlRohcCtxtRefresh": "5743783160086482139",
+        "perRbCgRpuPacketUncmpHdrOverlTransDlRohcProfile1": "710858922043409677",
+        "perRbCgRpuPacketUncmpHdrOverlTransDlRohcProfile2": "9148898901243344991",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "PP",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216140000,
+      "message": "DuPerRadioBeamMeasurement - MDAwMDAwMDc= / 81933",
+      "start": 2,
+      "end": 1,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "81933",
+        "gnbId": "5",
+        "gnbDuId": "1",
+        "beamIndex": "-6897622039926204121",
+        "gnbIdLength": "22",
+        "sectorCarrierId": "6839992687073122586",
+        "perBeamRaCbFailMsg1Ooc": "-3552388610660654155",
+        "perBeamRadioBeamFailureDetected": "9153065200980130929",
+        "perBeamRadioBeamFailureRecovered": "8062975794335456302",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RP",
+        "networkElement_2": "RC"
+      }
+    },
+    {
+      "date": 1707216155000,
+      "message": "CuCpPerCellRrcConnectedUe - MDAwMDAwMDM= / 114708",
+      "start": 1,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "114708",
+        "gnbId": "7",
+        "gnbIdLength": "22",
+        "numOfNrRrcConnectedSa": "-2928229378894052694",
+        "numOfNrRrcConnectedEndc": "4267234026383964648",
+        "numOfNrRrcConnectedNrdc": "2342124713044360289",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "UE"
+      }
+    },
+    {
+      "date": 1707216175000,
+      "message": "CuCpProcEndcRelease - MDAwMDAwMDA= / 49161",
+      "start": 1,
+      "end": 4,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "nci": "49161",
+        "spid": "-2085174990289986946",
+        "gnbId": "3",
+        "cause3gpp": "1926801372048011167",
+        "ueGroupId": "-7216338830663197147",
+        "globalEnbId": {
+          "enbId": "-8176068182981716696"
+        },
+        "globalGnbId": {
+          "gnbId": "3"
+        },
+        "gnbIdLength": "22",
+        "menbUeX2apId": "6310044914054973521",
+        "sgnbUeX2apId": "-6325869991355638782",
+        "uePowerClass": 848955649,
+        "prefUeGroupId": "5375594466138767164",
+        "timeStampStop": "-6707955233052360508",
+        "causeGroup3gpp": 1017008559,
+        "scgFailureType": -23392064,
+        "timeStampStart": "3052651106744515796",
+        "endcReleaseCause": 1518202435,
+        "ueServiceGroupId": "-4405204185122553805",
+        "ueMobilityGroupId": "-2871234243586002725",
+        "ueAdmissionGroupId": "2074962854547402045",
+        "noOfScellsToRelease": "-2514915038188979838",
+        "ueAdmissionPriority": "498474925882333695",
+        "menbUeX2apIdExtension": "1551018355206399678",
+        "endcScellDeconfigReason": -1589640344,
+        "endcReleaseTriggeringNode": 2069645099,
+        "isMenbUeX2apIdExtensionSet": -1725382345,
+        "drbReleasedSessionInfoUnavailable": 1282326071,
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "RC",
+        "networkElement_2": "ENODEB"
+      }
+    },
+    {
+      "date": 1707216200000,
+      "message": "CuUpPerUeRbS1NgTrafficRep - MDAwMDAwMDk= / undefined",
+      "start": 3,
+      "end": 0,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {
+        "gnbId": "6",
+        "nrType": 1924812891,
+        "linkType": -1928506482,
+        "qosValue": "6097444353165530023",
+        "ueGroupId": "2879837987085063493",
+        "gnbIdLength": "22",
+        "prefUeGroupId": "-3444272235670569651",
+        "ueServiceGroupId": "5499159815410891860",
+        "ueMobilityGroupId": "2693484485228185816",
+        "ueAdmissionGroupId": "7545601043147179035",
+        "perDrbPdcpVolTransUl": "3565496285230282525",
+        "perDrbPdcpPacketRecDl": "-8573779468080942218",
+        "perDrbPdcpPacketTransUl": "-6921977418080801325",
+        "perDrbPdcpPacketRecDlDisc": "3199430113824501437",
+        "perDrbPdcpPacketCongMarkDl": "-92395236468768759",
+        "perDrbPdcpPacketRecDlDiscAqm": "-2171915277500669826",
+        "messageDirection": "UNKNOWN",
+        "networkElement_1": "PP",
+        "networkElement_2": "UE"
+      }
+    }
+  ]
+}

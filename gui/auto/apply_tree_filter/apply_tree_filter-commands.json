@@ -1,0 +1,44 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 0,
+      "input": {
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "title": ""
+      },
+      "posX": -55,
+      "posY": 36,
+      "type": "start"
+    },
+    {
+      "edges": [],
+      "id": 2,
+      "input": {
+        "config": {
+          "operation": "panel"
+        },
+        "configFormat": "json",
+        "data": {
+          "panel": {
+            "method": "close",
+            "name": "trace_tree_select"
+          }
+        },
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": 94,
+      "posY": 34,
+      "type": "app"
+    }
+  ]
+}

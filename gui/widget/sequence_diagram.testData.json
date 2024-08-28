@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "title": "Block5"
+    },
+    {
+      "title": "Block2"
+    },
+    {
+      "title": "Block3"
+    }
+  ],
+  "rows": [
+    {
+      "date": 1701945583468,
+      "message": "Session request",
+      "start": 1,
+      "end": 2,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {"info1": "data1", "info2": "data2", "info3": "data3333333333333333333333333333333333333333333333333333333333333333"}
+    },
+    {
+      "date": 1701945583468,
+      "message": "Session request a",
+      "start": 0,
+      "end": 1,
+      "color": "var(--blue)",
+      "shape": "line",
+      "details": {"info1": "data1", "info2": "data2", "info3": "data3", "info4": "data4", "info5": "data5", "info6": "data6", "info7": "data7", "info8": "data8", "info9": "data9"}
+    },
+    {
+      "date": 1701945583468,
+      "message": "Session response b ",
+      "start": 0,
+      "end": 1,
+      "color": "var(--blue)",
+      "details": "data3"
+    },
+    {
+      "date": 1701945583468,
+      "message": "Session response c",
+      "start": 0,
+      "end": 1,
+      "shape": "arrow",
+      "color": "var(--blue)"
+    },
+    {
+      "date": 1701945503468,
+      "message": "Session request",
+      "start": 1,
+      "end": 1,
+      "color": "var(--blue)"
+    }
+  ]
+}

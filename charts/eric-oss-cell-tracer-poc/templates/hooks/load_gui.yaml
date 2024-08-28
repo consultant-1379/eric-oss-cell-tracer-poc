@@ -1,0 +1,95 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+{{- if .Values.gui.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "eric-oss-cell-tracer-poc.name" . }}-gui-loader
+  labels: {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 4 }}
+  annotations: {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 4 }}
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "15"
+    "helm.sh/hook-delete-policy": before-hook-creation
+spec:
+  ttlSecondsAfterFinished: 120
+  template:
+    metadata:
+      labels: {{- include "eric-oss-cell-tracer-poc.labels" . | nindent 8 }}
+      annotations: {{- include "eric-oss-cell-tracer-poc.annotations" . | nindent 8 }}
+    spec:
+      {{- if include "eric-oss-cell-tracer-poc.pullSecret" . }}
+      imagePullSecrets:
+        - name: {{ include "eric-oss-cell-tracer-poc.pullSecret" . | quote}}
+      {{- end }}
+      restartPolicy: Never
+      initContainers:
+      {{- if and .Values.gui.loadFrom.host .Values.gui.loadFrom.user .Values.gui.loadFrom.pass }}
+      - name: download-from-remote
+        image: {{ include "eric-oss-cell-tracer-poc.imagePath" (merge (dict "imageName" "owlws") .) }}
+        imagePullPolicy: {{ template "eric-oss-cell-tracer-poc.registryImagePullPolicy" . }}
+        command: ["sh", "-c"]
+        args:
+          - |
+            npm run download -- --project {{ .Values.gui.project | quote }} --host {{ .Values.gui.loadFrom.host | quote }} --user {{ .Values.gui.loadFrom.user | quote }} --pass {{ .Values.gui.loadFrom.pass | quote }} --path /output
+        env:
+          - name: NODE_TLS_REJECT_UNAUTHORIZED
+            value: "0"
+        volumeMounts:
+          - name: gui
+            mountPath: /output
+      {{- else }}
+      - name: copy-from-image
+        image: {{ include "eric-oss-cell-tracer-poc.imagePath" (merge (dict "imageName" "eric-oss-cell-tracer-poc") .) }}
+        imagePullPolicy: {{ template "eric-oss-cell-tracer-poc.registryImagePullPolicy" . }}
+        command: [ "cp" ]
+        args:
+          - "-r"
+          - "/gui/."
+          - "/output"
+        env:
+        volumeMounts:
+          - name: gui
+            mountPath: /output
+      {{- end }}
+      volumes:
+        - name: gui
+          emptyDir: {}
+      containers:
+        - name: owlws
+          image: {{ include "eric-oss-cell-tracer-poc.imagePath" (merge (dict "imageName" "owlws") .) }}
+          imagePullPolicy: {{ template "eric-oss-cell-tracer-poc.registryImagePullPolicy" . }}
+          command: ["sh", "-c"]
+          args:
+            - |
+              sleep 20
+              npm run upload -- --project {{ .Values.gui.project | quote }} --host "http://{{ include "eric-oss-cell-tracer-poc.fullname" . }}-gui-internal:8090" --user administrator --pass owl --path /output
+          env:
+            - name: NODE_TLS_REJECT_UNAUTHORIZED
+              value: "0"
+          volumeMounts:
+            - name: gui
+              mountPath: /output
+      volumes:
+        - name: gui
+          emptyDir: {}
+      {{- if (index .Values "podPriority" "eric-oss-cell-tracer-poc" "priorityClassName") }}
+      priorityClassName: {{ (index .Values "podPriority" "eric-oss-cell-tracer-poc" "priorityClassName") }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}

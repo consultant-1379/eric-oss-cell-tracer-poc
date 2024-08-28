@@ -1,0 +1,86 @@
+{
+  "$schema": "project.schema.json",
+  "apps": [
+    "app-sequence-diagram",
+    "app-design",
+    "app-cell-trace",
+    "app-trace-subscription",
+    "app-oas"
+  ],
+  "autos": [
+    "trace_filter",
+    "trace_tree_select",
+    "cancel_trace",
+    "start_trace",
+    "apply_tree_filter",
+    "refresh_table",
+    "trace_date_select",
+    "refresh_sequence_diagram",
+    "apply_date_filter",
+    "sequence_plot"
+  ],
+  "credentials": [],
+  "name": "",
+  "roles": [
+    "user-role"
+  ],
+  "storage": {
+    "items": [
+      {
+        "format": "json",
+        "key": "blocks",
+        "url": "./storage/items/blocks.json"
+      },
+      {
+        "format": "json",
+        "key": "list_filters_sample",
+        "url": "./storage/items/list_filters_sample.json"
+      },
+      {
+        "format": "json",
+        "key": "list_nodes_sample",
+        "url": "./storage/items/list_nodes_sample.json"
+      },
+      {
+        "format": "json",
+        "key": "rows",
+        "url": "./storage/items/rows.json"
+      },
+      {
+        "format": "json",
+        "key": "sequence_sample",
+        "url": "./storage/items/sequence_sample.json"
+      },
+      {
+        "format": "json",
+        "key": "trace_sample",
+        "url": "./storage/items/trace_sample.json"
+      }
+    ],
+    "schemas": []
+  },
+  "systems": [
+    "naming",
+    "session",
+    "debug",
+    "request",
+    "startup",
+    "menu",
+    "plugin"
+  ],
+  "users": [
+    "eiap"
+  ],
+  "widgets": [
+    "trace_tree_select",
+    "design",
+    "trace_tree_subscription",
+    "trace_html",
+    "sequence_diagram",
+    "trace_date_select",
+    "oas",
+    "trace_sequence",
+    "trace_form",
+    "trace_table"
+  ]
+}

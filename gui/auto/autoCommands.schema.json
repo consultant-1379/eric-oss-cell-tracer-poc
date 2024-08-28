@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "autoCommands.schema.json",
+  "title": "Auto Commands",
+  "description": "Auto commands",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "autoCommand"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "autoCommand": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "posX": {
+            "type": "number"
+          },
+          "posY": {
+            "type": "number"
+          },
+          "edges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "input": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "data": {},
+              "config": {},
+              "configFormat": {
+                "enum": [
+                  "javascript",
+                  "json"
+                ]
+              },
+              "dataFormat": {
+                "enum": [
+                  "javascript",
+                  "json",
+                  "sql",
+                  "html",
+                  "sh"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

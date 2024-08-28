@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+build/
+.idea/
+node/*
+*.tgz
+.DS_Store:q
+playwright-report/*

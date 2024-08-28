@@ -1,0 +1,26 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "style": ".table {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n}\n\n.table-row {\n  display: table-row;\n}\n\n.table-cell {\n  display: table-cell;\n  margin: 0em;\n  padding: 1em;\n  height: auto;\n  border: 2px solid var(--table-outer-gray);\n}",
+    "tile": {
+      "auto": {
+        "args": {
+          "data": {
+            "4G": true,
+            "5G": true,
+            "end": 1699621143000,
+            "start": 1699621143000
+          }
+        },
+        "name": "trace_filter"
+      },
+      "defaultTestData": false,
+      "subtitle": "",
+      "title": "SGW"
+    }
+  },
+  "format": "csv",
+  "name": "trace_html",
+  "systemTypes": [],
+  "type": "HTML"
+}

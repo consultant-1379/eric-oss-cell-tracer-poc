@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "systemPlugin.schema.json",
+  "title": "System Plugin",
+  "description": "Plugins to extend with more functionality",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "code": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "mode",
+          "auto"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "auto": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "args": {
+                "type": "object"
+              },
+              "trace": {
+                "type": "boolean"
+              },
+              "headers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cookies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "disableSyntax": {
+            "type": "boolean",
+            "default": false,
+            "description": "Disable syntax check"
+          },
+          "disableFormatter": {
+            "type": "boolean",
+            "default": false,
+            "description": "Disable formatter"
+          }
+        }
+      }
+    }
+  }
+}

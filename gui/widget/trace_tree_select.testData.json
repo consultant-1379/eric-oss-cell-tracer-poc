@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Node",
+    "data": "node-id",
+    "children": [
+      {
+        "label": "gNodeB Id1"
+      },
+      {
+        "label": "gNodeB Id2"
+      },
+      {
+        "label": "gNodeB Id2"
+      }
+    ]
+  },
+  {
+    "label": "Trace type",
+    "data": "trace-type",
+    "children": [
+      {
+        "label": "Node Level"
+      },
+      {
+        "label": "Cell Level"
+      },
+      {
+        "label": "UE Level"
+      }
+    ]
+  },
+  {
+    "label": "Node Function type",
+    "data": "node-function-type",
+    "children": [
+      {
+        "label": "CUCP"
+      },
+      {
+        "label": "CUUP"
+      },
+      {
+        "label": "DU"
+      }
+    ]
+  },
+  {
+    "label": "PM Event",
+    "data": "pm-event",
+    "children": [
+      {
+        "label": "CuCpPerNgPagingRep"
+      },
+      {
+        "label": "CuCpXnConfigurationTransfer"
+      },
+      {
+        "label": "CuUpPerDrbSetup"
+      }
+    ]
+  }
+]

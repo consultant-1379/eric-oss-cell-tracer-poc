@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "projectRole.schema.json",
+  "title": "Project role",
+  "description": "Project role",
+  "type": "object",
+  "required": [
+    "roleDetails"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "roleDetails": {
+      "type": "array",
+      "items": {
+        "$ref": "roleDetails.schema.json"
+      }
+    }
+  }
+}

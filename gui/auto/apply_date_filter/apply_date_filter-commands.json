@@ -1,0 +1,44 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 0,
+      "input": {
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "title": ""
+      },
+      "posX": -295,
+      "posY": -14,
+      "type": "start"
+    },
+    {
+      "edges": [],
+      "id": 2,
+      "input": {
+        "config": {
+          "operation": "panel"
+        },
+        "configFormat": "json",
+        "data": {
+          "panel": {
+            "method": "close",
+            "name": "trace_date_select"
+          }
+        },
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": -174,
+      "posY": -15,
+      "type": "app"
+    }
+  ]
+}

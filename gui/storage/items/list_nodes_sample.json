@@ -1,0 +1,22 @@
+[
+  {"gnid": 1, "gnodebName": "NR01gNodeBRadio00001", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001,ManagedElement=NR01gNodeBRadio00001,GNBDUFunction=1"},
+  {"gnid": 2, "gnodebName": "NR01gNodeBRadio00002", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,GNBDUFunction=1"},
+  {"gnid": 3, "gnodebName": "NR01gNodeBRadio00003", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00003,ManagedElement=NR01gNodeBRadio00003,GNBDUFunction=1"},
+  {"gnid": 4, "gnodebName": "NR01gNodeBRadio00004", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00004,ManagedElement=NR01gNodeBRadio00004,GNBDUFunction=1"},
+  {"gnid": 5, "gnodebName": "NR01gNodeBRadio00005", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00005,ManagedElement=NR01gNodeBRadio00005,GNBDUFunction=1"},
+  {"gnid": 6, "gnodebName": "NR01gNodeBRadio00006", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00006,ManagedElement=NR01gNodeBRadio00006,GNBDUFunction=1"},
+  {"gnid": 7, "gnodebName": "NR01gNodeBRadio00007", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00007,ManagedElement=NR01gNodeBRadio00007,GNBDUFunction=1"},
+  {"gnid": 8, "gnodebName": "NR01gNodeBRadio00008", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00008,ManagedElement=NR01gNodeBRadio00008,GNBDUFunction=1"},
+  {"gnid": 9, "gnodebName": "NR01gNodeBRadio00009", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00009,ManagedElement=NR01gNodeBRadio00009,GNBDUFunction=1"},
+  {"gnid": 10, "gnodebName": "NR01gNodeBRadio00010", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00010,ManagedElement=NR01gNodeBRadio00010,GNBDUFunction=1"},
+  {"gnid": 11, "gnodebName": "NR01gNodeBRadio00011", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00011,ManagedElement=NR01gNodeBRadio00011,GNBDUFunction=1"},
+  {"gnid": 12, "gnodebName": "NR01gNodeBRadio00012", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00012,ManagedElement=NR01gNodeBRadio00012,GNBDUFunction=1"},
+  {"gnid": 13, "gnodebName": "NR01gNodeBRadio00013", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00013,ManagedElement=NR01gNodeBRadio00013,GNBDUFunction=1"},
+  {"gnid": 14, "gnodebName": "NR01gNodeBRadio00014", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00014,ManagedElement=NR01gNodeBRadio00014,GNBDUFunction=1"},
+  {"gnid": 15, "gnodebName": "NR01gNodeBRadio00015", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00015,ManagedElement=NR01gNodeBRadio00015,GNBDUFunction=1"},
+  {"gnid": 16, "gnodebName": "NR01gNodeBRadio00016", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00016,ManagedElement=NR01gNodeBRadio00016,GNBDUFunction=1"},
+  {"gnid": 17, "gnodebName": "NR01gNodeBRadio00017", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00017,ManagedElement=NR01gNodeBRadio00017,GNBDUFunction=1"},
+  {"gnid": 18, "gnodebName": "NR01gNodeBRadio00018", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00018,ManagedElement=NR01gNodeBRadio00018,GNBDUFunction=1"},
+  {"gnid": 19, "gnodebName": "NR01gNodeBRadio00019", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00019,ManagedElement=NR01gNodeBRadio00019,GNBDUFunction=1"},
+  {"gnid": 20, "gnodebName": "NR01gNodeBRadio00020", "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00020,ManagedElement=NR01gNodeBRadio00020,GNBDUFunction=1"}
+]

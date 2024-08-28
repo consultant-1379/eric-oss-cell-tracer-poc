@@ -1,0 +1,41 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 0,
+      "input": {
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "title": ""
+      },
+      "posX": 100,
+      "posY": 100,
+      "type": "start"
+    },
+    {
+      "edges": [],
+      "id": 1,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "public",
+          "sendType": "set",
+          "widgetName": "trace_date_select"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": "Set time"
+      },
+      "posX": 221,
+      "posY": 100,
+      "type": "widget"
+    }
+  ]
+}

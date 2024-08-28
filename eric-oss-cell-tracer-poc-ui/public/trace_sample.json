@@ -1,0 +1,357 @@
+[
+  {
+    "timestamp": "2023-12-19T16:33:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00002",
+    "eventTypeName": "CuCpProcEndcSetup",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "32770",
+      "spid": "7320262915100214397",
+      "gnbId": "2",
+      "cause3gpp": "-6389642784598728641",
+      "ueGroupId": "7578790599168846536",
+      "globalEnbId": {
+        "enbId": "8139373648874162340"
+      },
+      "globalGnbId": {
+        "gnbId": "2"
+      },
+      "gnbIdLength": "22",
+      "menbUeX2apId": "-2252463644870584677",
+      "sgnbUeX2apId": "5143506557283771509",
+      "prefUeGroupId": "-9097657165162149250",
+      "timeStampStop": "-6918424776578903630",
+      "causeGroup3gpp": -494827823,
+      "timeStampStart": "-5751289554736733625",
+      "endcSetupResult": -714969324,
+      "noOfScellsToAdd": "-3841054381068820082",
+      "ueServiceGroupId": "-7137194583038849688",
+      "ueMobilityGroupId": "-3819333913354896700",
+      "ueAdmissionGroupId": "-8085033497108877487",
+      "ueAdmissionPriority": "-7450121201580866903",
+      "menbUeX2apIdExtension": "4247766687769730705",
+      "isMenbUeX2apIdExtensionSet": 1902078039,
+      "sgnbAdditionTriggerIndication": -766528209
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:32:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00007",
+    "eventTypeName": "DuPerUeRbTrafficRepAggr10",
+    "nwFunction": "DU",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "114690",
+      "gnbId": "7",
+      "nrType": -938081167,
+      "gnbDuId": "1",
+      "bearerId": "8927114175542916861",
+      "qosValue": "-3648975109614315219",
+      "rrpIndex": "4720542854448528464",
+      "ueGroupId": "-5044284494008662216",
+      "gnbIdLength": "22",
+      "uePowerClass": -1301077922,
+      "lastTimeStamp": "-7217925811775438515",
+      "prefUeGroupId": "1423515048303040145",
+      "nrdcConfigured": 1838475635,
+      "perRbMacVolDlDrb": "2467977297438275367",
+      "ueServiceGroupId": "-8207803754942501325",
+      "perRbMacTimeDlDrb": "-8375406497894389783",
+      "ueMobilityGroupId": "-2551095661212490315",
+      "ueAdmissionGroupId": "1283127015793275131",
+      "perRbRlcDelayTimeDl": "6240962513826910201",
+      "numOfAggregatedEvents": "2297870080914723323",
+      "perRbMacTimeDlDrbSamp": "-5351127652987309586",
+      "perRbMacRbsymUsedPdsch": "8312193388759888305",
+      "perRbRlcDelayPktTransDl": "4829260735499888581",
+      "perRbMacVolDlDrbLastSlot": "5229586729838804003",
+      "perRbMacTimeDlDrbLastSlot": "-4302331850459070436",
+      "perRbMacVolDlDrbSingleBurst": "7961746293723624580",
+      "perRbMacTimeDlDrbLastSlotSamp": "-8941661540230819048",
+      "perRbMacVolDlDrbOverlapLastSlot": "5836471927563335006",
+      "perRbMacVolDlDrbSingleBurstSamp": "-1169744654645745592",
+      "perRbMacLatTimeDlDrxactiveInsync": "-3613417312010925930",
+      "perRbMacOverlapTimeDlDrbExtScell": "693854778515832532",
+      "perRbMacLatTimeDlDrxinactiveInsync": "5320529494899831467",
+      "perRbMacLatTimeDlDrxactiveInsyncSamp": "-6173716627323007119",
+      "perRbMacVolDlDrbSingleSlotShortBurst": "-3708321034946226423",
+      "perRbMacTimeDlDrbSingleSlotShortBurst": "-6545510059671899085",
+      "perRbMacLatTimeDlDrxinactiveInsyncSamp": "3113189947845021171"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:31:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00018",
+    "eventTypeName": "DuPerCellTrafficRep",
+    "nwFunction": "DU",
+    "trcLevel": "CELL",
+    "body": {
+      "nci": "294914",
+      "gnbId": "18",
+      "gnbDuId": "1",
+      "gnbIdLength": "22",
+      "perCellDlSlots": "-1740810308233583859",
+      "perCellMacVolDl": "8431464154982749982",
+      "perCellMacVolUl": "2020459061466461746",
+      "perCellMacVolDlRat": "-4939125544490772785",
+      "perCellMacActiveSrs": "-2492696185162196931",
+      "perCellActiveUeDlSum": "-7906333686990396240",
+      "perCellActiveUeUlSum": "-6850352247040595332",
+      "perCellMacVolDlScell": "7884925100945706682",
+      "perCellMacVolUlScell": "9157096031228589478",
+      "perCellRadioThpVolDl": "567951681186608190",
+      "perCellRadioThpVolUl": "6410258906644086835",
+      "perCellActiveUeDlSamp": "-8881139088517685284",
+      "perCellActiveUeUlSamp": "-7596199554904247090",
+      "perCellPdschAvailTime": "-6447608262887210864",
+      "perCellPuschAvailTime": "2033194590536081302",
+      "perCellMacVolDlPcellCa": "8186771454357269049",
+      "perCellSchedActivityDl": "-8635958930323595528",
+      "perCellSchedActivityUl": "4083470634831732348",
+      "perCellMacVolDlScellExt": "-338837136775612454",
+      "perCellActiveUeDlTruesamp": "5527588538607731425",
+      "perCellActiveUeUlTruesamp": "4367167780644454757",
+      "perCellPdschSchedActivity": "-8017332607550591279",
+      "perCellPuschSchedActivity": "5599736451859832424",
+      "perCellMacOffloadVolDlScell": "-8007760733617707133",
+      "perCellMacOffloadVolUlScell": "637674457899898436",
+      "perCellMacVolUlOffloadScell": "4140662084627805019",
+      "perCellRadioPdschEmptySlots": "-7258716732439462075",
+      "perCellMacOffloadVolDlScellExt": "-3720161764254162824",
+      "perCellRadioPdschEmptySlotsForced": "-6032643054242061550",
+      "perCellPuschSchedActivityDynSlotAggr": "1796383441246918844"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:30:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00003",
+    "eventTypeName": "DuPerCellplmnTrafficRep",
+    "nwFunction": "DU",
+    "trcLevel": "CELL",
+    "body": {
+      "nci": "49154",
+      "gnbId": "3",
+      "gnbDuId": "1",
+      "gnbIdLength": "22",
+      "perCellplmnMacVolDl": "-3309466679244090256",
+      "perCellplmnMacVolUl": "8592472762760946121",
+      "perCellplmnPdschSchedActivity": "2417900938375590588",
+      "perCellplmnPuschSchedActivity": "3638684577700491738"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:28:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00002",
+    "eventTypeName": "CuCpProcMnNrdcRelease",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "32769",
+      "cause": "7609532888569393",
+      "gnbId": "2",
+      "causeGroup": -539769402,
+      "globalGnbId": {
+        "gnbId": "2"
+      },
+      "gnbIdLength": "22",
+      "overheating": -838487951,
+      "timeStampStop": "-8439870893829188707",
+      "timeStampStart": "9019343566314116409",
+      "globalRemoteGnbId": {
+        "gnbId": "2"
+      },
+      "intraCellHandover": 590272715,
+      "mnNrdcReleaseResult": 827365465,
+      "globalSecondaryGnbId": {
+        "gnbId": "2"
+      },
+      "mnReleaseWithRelocation": 2144671065,
+      "mnNrdcReleaseInitiatingNode": -196568352,
+      "mnNrdcReleaseInitiatingMessage": -1543128006
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:27:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00012",
+    "eventTypeName": "CuCpProcEndcPscellChangeIntraSgnbIn",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "196610",
+      "gnbId": "12",
+      "result": 474239586,
+      "cause3gpp": "-3916219175973498368",
+      "globalEnbId": {
+        "enbId": "5161973565933967771"
+      },
+      "globalGnbId": {
+        "gnbId": "12"
+      },
+      "gnbIdLength": "22",
+      "timeStampStop": "3256266280179322409",
+      "causeGroup3gpp": -1581296430,
+      "timeStampStart": "5909711612207940039",
+      "noOfScellsToAdd": "-8537374641611616674",
+      "sourceCellIdentity": "-2393489382767253900"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:26:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00016",
+    "eventTypeName": "CuCpNcgiMeasurement",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "262145",
+      "gnbId": "16",
+      "measId": "8567791522941199355",
+      "measType": -2059335032,
+      "measMethod": -1150966483,
+      "measStatus": 891477499,
+      "globalGnbId": {
+        "gnbId": "16"
+      },
+      "gnbIdLength": "22",
+      "neighborPci": "-4795607977705585065",
+      "neighborArfcn": "2066964742325487504",
+      "neighborNrCgi": {
+        "nrCellIdentity": "755462140960451253"
+      }
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:25:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00009",
+    "eventTypeName": "CuCpPerCuCpRrcInactiveUe",
+    "nwFunction": "CUCP",
+    "trcLevel": "GNODEB",
+    "body": {
+      "gnbId": "9",
+      "gnbIdLength": "22",
+      "totalNumOfRrcInactiveUeSa": "1922457280138377973"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:24:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00008",
+    "eventTypeName": "DuPerRadioBeamMeasurement",
+    "nwFunction": "DU",
+    "trcLevel": "CELL",
+    "body": {
+      "nci": "131073",
+      "gnbId": "8",
+      "gnbDuId": "1",
+      "beamIndex": "5179071955204296686",
+      "gnbIdLength": "22",
+      "sectorCarrierId": "-5443176114700497231",
+      "perBeamRaCbFailMsg1Ooc": "8054056784521971364",
+      "perBeamRadioBeamFailureDetected": "-6261944122013834893",
+      "perBeamRadioBeamFailureRecovered": "2958431231582835009"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:23:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00005",
+    "eventTypeName": "CuCpProcX2MnInitiatedSgnbModification",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "81922",
+      "spid": "-6263491583668141348",
+      "gnbId": "5",
+      "cause3gpp": "-7117285505511001867",
+      "ueGroupId": "1750104801016171011",
+      "bearerType": 1255726452,
+      "globalEnbId": {
+        "enbId": "-8523097539996351634"
+      },
+      "globalGnbId": {
+        "gnbId": "5"
+      },
+      "gnbIdLength": "22",
+      "prefUeGroupId": "4091182473321123310",
+      "timeStampStop": "-6865178621030778935",
+      "causeGroup3gpp": -445427194,
+      "timeStampStart": "1629686187938958101",
+      "modificationType": 25206827,
+      "ueServiceGroupId": "5969626168038080659",
+      "ueMobilityGroupId": "190339400320643533",
+      "modificationResult": -565720515,
+      "ueAdmissionGroupId": "6225210480229118435",
+      "ueAdmissionPriority": "8573686641603179319"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:22:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00011",
+    "eventTypeName": "CuCpEndcMobilityEvaluation",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "180225",
+      "gnbId": "11",
+      "globalGnbId": {
+        "gnbId": "11"
+      },
+      "gnbIdLength": "22",
+      "bestNeighbPciInvalid": "-8547926224032171314"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:21:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00009",
+    "eventTypeName": "CuUpPerNfTrafficRep",
+    "nwFunction": "CUUP",
+    "trcLevel": "GNODEB",
+    "body": {
+      "gnbId": "9",
+      "cuupId": "1",
+      "gnbIdLength": "22",
+      "perCuupRohcCidDl": "-4104319019896615324",
+      "perCuupRohcCidUl": "-8618741817092325365",
+      "perCuupPacketDisc": "7981493648711658348",
+      "perCuupSwitchToNr": "2365903511846617643",
+      "perCuupSwitchToLte": "-5306787040846678787",
+      "perCuupRohcCidDlMax": "7191759334955366778",
+      "perCuupRohcCidUlMax": "410252502711001824",
+      "perCuupPacketDiscGtpu": "-9148494870409747095",
+      "perCuupPdcpRecDlInact": "3436570482501029305",
+      "perCuupPdcpDiscDlInact": "-1242565543173837760",
+      "perCuupPacketDiscNoCtxt": "1393394336965779368",
+      "perCuupTestModePdcpPacketGenerated": "8603940928682197149"
+    }
+  },
+  {
+    "timestamp": "2023-12-19T16:20:00.000Z",
+    "gnodebName": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00001ManagedElement=NR01gNodeBRadio00002",
+    "eventTypeName": "CuCpMnNrdcSetupBufMonReport",
+    "nwFunction": "CUCP",
+    "trcLevel": "UE",
+    "body": {
+      "nci": "32770",
+      "gnbId": "2",
+      "gnbDuId": "1",
+      "ueGroupId": "-4541478214078720369",
+      "globalGnbId": {
+        "gnbId": "2"
+      },
+      "gnbIdLength": "22",
+      "bufMonReport": {
+        "drbId": "-2355348854038397985",
+        "sduDlVol": "-6686813145976085354",
+        "mapped5qi": "-8792019265917324921",
+        "pduSessionId": "-4623693701656151765",
+        "sduDlOldestAge": "-2578131234572987217",
+        "priorityLevelArp": "-2277880296406244693",
+        "sduDlAgeThreshold": "-1235723549832832521",
+        "sduDlVolThreshold": "855005138955056381"
+      },
+      "prefUeGroupId": "6467360006101419418",
+      "bufMonDuration": "-4164020805897853483",
+      "ueServiceGroupId": "4541268670143907956",
+      "ueMobilityGroupId": "-4594730379545007301",
+      "ueAdmissionGroupId": "3733420160837353567"
+    }
+  }
+]

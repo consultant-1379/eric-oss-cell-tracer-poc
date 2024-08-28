@@ -1,0 +1,29 @@
+{
+  "$schema": "projectRole.schema.json",
+  "roleDetails": [
+    {
+      "customApps": [
+        "owl-dynamic-app-design",
+        "owl-dynamic-app-oas"
+      ],
+      "defaultApps": [],
+      "description": "",
+      "isCustomInclude": false,
+      "isDefaultInclude": true,
+      "name": "user-role",
+      "permission": {
+        "app": "full",
+        "auto": "full",
+        "exe": "full",
+        "fm": "full",
+        "job": "full",
+        "pm": "full",
+        "role": "full",
+        "storage": "full",
+        "system": "full",
+        "topology": "full",
+        "user": "full"
+      }
+    }
+  ]
+}

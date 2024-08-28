@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "systemDebug.schema.json",
+  "title": "System Debug",
+  "description": "Settings related to debug.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "default": "off",
+      "enum": [
+        "off",
+        "fatal",
+        "error",
+        "warn",
+        "info",
+        "debug",
+        "trace",
+        "all"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "app.schema.json",
+  "config": {
+    "dashboardStyle": "grid-template-columns: 1fr;",
+    "description": "",
+    "dialogs": [],
+    "tiles": [
+      {
+        "name": "design"
+      }
+    ]
+  },
+  "name": "app-design",
+  "type": "dashboard"
+}

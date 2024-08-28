@@ -1,0 +1,6 @@
+className,eventId,traceLevel,nwFunction,networkElement1,networkElement2,messageDirection,
+com.ericsson.pm_event.CuCpNgInitialUeMessageOuterClass$CuCpNgInitialUeMessage,3031,GNODEB,PM_EVENT_MESSAGE_GROUP_CUCP,RC,UE,,
+com.ericsson.pm_event.DuPerCellTrafficRepExtendedOuterClass$DuPerCellTrafficRepExtended,2053,CELL,PM_EVENT_MESSAGE_GROUP_DU,RP,RC,,
+com.ericsson.pm_event.CuUpPerUeRbCgTrafficRepAggr10OuterClass$CuUpPerUeRbCgTrafficRepAggr10,4012,UE,PM_EVENT_MESSAGE_GROUP_CUUP,PP,UE,,
+non_existent_class,2048,UE,PM_EVENT_MESSAGE_GROUP_DU,RP,UE,,
+com.ericsson.pm_event.DuProcUeContextSetupOuterClass$DuProcUeContextSetup,,UE,PM_EVENT_MESSAGE_GROUP_DU,,,,

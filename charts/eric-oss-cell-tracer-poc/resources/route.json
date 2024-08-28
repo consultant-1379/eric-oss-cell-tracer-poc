@@ -1,0 +1,12 @@
+{
+  "id": "{{ include "eric-oss-cell-tracer-poc.fullname" . | replace "-" "_" }}_route",
+  "predicates": [{
+    "name": "Path",
+    "args": {
+      "_genkey_0": "/{{ .Values.gui.contextPath }}/**"
+    }
+  }],
+  "filters": [],
+  "uri": "http://{{ include "eric-oss-cell-tracer-poc.fullname" . }}-gui:8090",
+  "order": 0
+}

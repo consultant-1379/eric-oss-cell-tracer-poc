@@ -1,0 +1,127 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 0,
+      "input": {
+        "config": {
+          "argsSchema": {},
+          "showDialog": false
+        },
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": -315,
+      "posY": -6,
+      "type": "start"
+    },
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 1,
+      "input": {
+        "configFormat": "javascript",
+        "data": {},
+        "dataFormat": "json",
+        "name": "blank",
+        "title": "blank-request"
+      },
+      "posX": -220,
+      "posY": -6.5,
+      "type": "fetch"
+    },
+    {
+      "edges": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "id": 2,
+      "input": {
+        "config": {},
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": ""
+      },
+      "posX": -99,
+      "posY": -7,
+      "type": "script"
+    },
+    {
+      "edges": [
+        {
+          "id": 5
+        }
+      ],
+      "id": 3,
+      "input": {
+        "config": {
+          "description": "",
+          "publish": "private",
+          "title": "Subscription canceled",
+          "type": "confirm"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "succeeded",
+        "title": "Confirm-cancel"
+      },
+      "posX": 33,
+      "posY": -8,
+      "type": "notification"
+    },
+    {
+      "edges": [],
+      "id": 4,
+      "input": {
+        "config": {
+          "description": "",
+          "publish": "private",
+          "title": "Canceling subscription failed",
+          "type": "error"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "failed",
+        "title": "Failed-cancel"
+      },
+      "posX": -98,
+      "posY": 120,
+      "type": "notification"
+    },
+    {
+      "edges": [],
+      "id": 5,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "public",
+          "sendType": "set",
+          "widgetName": "trace_form"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": "deactivate"
+      },
+      "posX": 212,
+      "posY": -8,
+      "type": "widget"
+    }
+  ]
+}

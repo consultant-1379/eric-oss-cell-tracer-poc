@@ -1,0 +1,8 @@
+{
+  "$schema": "../autoDetails.schema.json",
+  "description": "",
+  "max": 100,
+  "name": "refresh_sequence_diagram",
+  "type": [],
+  "viewPermission": "Disallow"
+}

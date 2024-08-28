@@ -1,0 +1,58 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 0,
+      "input": {
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "title": ""
+      },
+      "posX": -304,
+      "posY": -31,
+      "type": "start"
+    },
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 1,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "html",
+        "name": "sequence_event_records",
+        "title": "fetch_event"
+      },
+      "posX": -237.5,
+      "posY": -31,
+      "type": "fetch"
+    },
+    {
+      "edges": [],
+      "id": 2,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "private",
+          "sendType": "set",
+          "widgetName": "sequence_diagram"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "sequence_plot",
+        "title": "plot"
+      },
+      "posX": -139,
+      "posY": -28,
+      "type": "widget"
+    }
+  ]
+}

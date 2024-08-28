@@ -1,0 +1,70 @@
+      {
+        "blocks": [
+          {
+            "title": "RC"
+          },
+          {
+            "title": "PP"
+          },
+          {
+            "title": "RP"
+          },
+          {
+            "title": "ENODEB"
+          },
+          {
+            "title": "GNODEB"
+          },
+          {
+            "title": "UE"
+          },
+          {
+            "title": "TARGET_GNODEB"
+          }
+        ],
+        "rows": [
+                   {
+          "date": 1706140740000,
+          "message": {"CuCpProcMnNrdcRelease": "ccccc", "aaaaaaaaaaa": "bbbbbbbbb"},
+          "start": 0,
+          "end": 1,
+          "color": "var(--blue)",
+          "width": 15
+        },
+        {
+          "date": 1706140680000,
+          "message": "CuCpProcMnNrdcRelease",
+          "start": 0,
+          "end": 4,
+          "color": "var(--blue)"
+        },
+        {
+          "date": 1706140620000,
+          "message": "CuCpEcidMeasurementInitiationResponse",
+          "start": 0,
+          "end": 5,
+          "color": "var(--blue)"
+        },
+        {
+          "date": 1706140560000,
+          "message": "CuUpPerUeRbCgTrafficRep",
+          "start": 1,
+          "end": 5,
+          "color": "var(--blue)"
+        },
+        {
+          "date": 1706140500000,
+          "message": "CuCpMeasurementReportSaEval",
+          "start": 0,
+          "end": 5,
+          "color": "var(--blue)"
+        },
+        {
+          "date": 1706140440000,
+          "message": "CuCpProcRrcEstab",
+          "start": 0,
+          "end": 5,
+          "color": "var(--blue)"
+        }
+            ]
+      }

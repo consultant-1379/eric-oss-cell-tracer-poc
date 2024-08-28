@@ -1,0 +1,17 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "style": "",
+    "tile": {
+      "auto": {
+        "name": "trace_filter"
+      },
+      "defaultTestData": false,
+      "title": "Sequence Diagram"
+    }
+  },
+  "format": "csv",
+  "name": "trace_sequence",
+  "systemTypes": [],
+  "type": "SequenceDiagram"
+}

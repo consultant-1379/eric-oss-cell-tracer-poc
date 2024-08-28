@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "projectUser.schema.json",
+  "title": "Project user",
+  "description": "Project user",
+  "type": "object",
+  "required": [
+    "userDetails"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "userDetails": {
+      "type": "array",
+      "items": {
+        "$ref": "userDetails.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "systemNaming.schema.json",
+  "title": "System Naming",
+  "description": "Set the names of entire application.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "default": "Owl"
+    },
+    "name": {
+      "type": "string",
+      "default": "Owl"
+    }
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "openapi": "3.0.2",
+  "paths": {
+    "/v1/cm/nr/gnodebs": {
+      "get": {
+        "tags": [
+          "cm",
+          "filters"
+        ],
+        "summary": "get all gnodebs the rApp stores",
+        "operationId": "getGnodebs",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GNodebs"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/v1/cm/nr/nrcells": {
+      "get": {
+        "tags": [
+          "cm",
+          "filters"
+        ],
+        "summary": "get the nrcells belonging to the gnodebs requested",
+        "operationId": "getNrcells",
+        "parameters": [
+          {
+            "name": "gnid",
+            "in": "query",
+            "description": "gnodeb id, this is a 22 to 32 bits identifier",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NRCells"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/v1/event/nr/filters": {
+      "get": {
+        "tags": [
+          "events",
+          "filters"
+        ],
+        "summary": "get nr event filter values",
+        "operationId": "getNRFilterValues",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NRFilterValues"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/v1/event/nr/events": {
+      "get": {
+        "tags": [
+          "events"
+        ],
+        "summary": "get nr events",
+        "operationId": "getNREvents",
+        "parameters": [
+          {
+            "name": "gnid",
+            "in": "query",
+            "description": "gnodeb id, this is a 22 to 32 bits identifier",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          {
+            "name": "nci",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "description": "nci",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          {
+            "name": "eId",
+            "in": "query",
+            "description": "event type id, as in event_id of the NR protobuf pmevent definition",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          },
+          {
+            "name": "nwFunction",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/nwFunction"
+              }
+            }
+          },
+          {
+            "name": "trcLevel",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/trcLevel"
+              }
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "description": "epoch start time (seconds)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "description": "epoch end time (seconds)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NREvents"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "trcLevel": {
+        "type": "string",
+        "description": "maps to gNodeB, Cell or UE",
+        "enum": [
+          "GNODEB",
+          "CELL",
+          "UE"
+        ]
+      },
+      "nwFunction": {
+        "type": "string",
+        "description": "maps to PmEventMessageGroup in pmevent definition, e.g. CUUP, CUCP, DU, etc.",
+        "enum": [
+          "DU",
+          "CUCP",
+          "CUUP",
+          "UNRECOGNIZED"
+        ]
+      },
+      "GNodebs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GNodeb"
+        }
+      },
+      "GNodeb": {
+        "type": "object",
+        "required": [
+          "gnid",
+          "gnodebName"
+        ],
+        "properties": {
+          "gnid": {
+            "type": "integer",
+            "format": "int64",
+            "description": ""
+          },
+          "gnodebName": {
+            "description": "managed element, from FDN",
+            "type": "string"
+          }
+        }
+      },
+      "NRCells": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/NRCell"
+        }
+      },
+      "NRCell": {
+        "type": "object",
+        "required": [
+          "nci",
+          "cellName"
+        ],
+        "properties": {
+          "nci": {
+            "type": "integer",
+            "format": "int64",
+            "description": "nci"
+          },
+          "cellName": {
+            "description": "NRCellDU field from FDN",
+            "type": "string"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "NRFilterValues": {
+        "type": "object",
+        "required": [
+          "nwFunctions",
+          "trcLevels",
+          "eventTypes"
+        ],
+        "properties": {
+          "trcLevels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/trcLevel"
+            }
+          },
+          "nwFunctions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/nwFunction"
+            }
+          },
+          "eventTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/eventType"
+            }
+          }
+        }
+      },
+      "eventType": {
+        "type": "object",
+        "required": [
+          "eId",
+          "eventTypeName",
+          "nwFunction",
+          "trcLevel"
+        ],
+        "properties": {
+          "eId": {
+            "type": "integer",
+            "format": "int64",
+            "description": "event type id, as in event_id of the NR protobuf pmevent definition"
+          },
+          "eventTypeName": {
+            "description": "event type, class name of the specific event",
+            "type": "string"
+          },
+          "nwFunction": {
+            "$ref": "#/components/schemas/nwFunction"
+          },
+          "trcLevel": {
+            "$ref": "#/components/schemas/trcLevel"
+          }
+        }
+      },
+      "NREvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/NREvent"
+        }
+      },
+      "NREvent": {
+        "type": "object",
+        "required": [
+          "timestamp",
+          "gnodebName",
+          "eventType",
+          "messageDirection",
+          "body"
+        ],
+        "properties": {
+          "timestamp": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Timestamp, epoc ms"
+          },
+          "gnodebName": {
+            "type": "string",
+            "description": "gNodeB Name"
+          },
+          "NRCell": {
+            "$ref": "#/components/schemas/NRCell"
+          },
+          "eventType": {
+            "$ref": "#/components/schemas/eventType"
+          },
+          "messageDirection": {
+            "description": "message direction, as in Asn1Message.MessageDirection in NR protobuf definition",
+            "type": "string"
+          },
+          "body": {
+            "description": "PM Event body JSON",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

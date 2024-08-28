@@ -1,0 +1,91 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "rows": [
+      {
+        "cols": [
+          {
+            "sections": [
+              {
+                "attribute": "start",
+                "datepicker": {
+                  "format": "epoch",
+                  "nowAsText": true,
+                  "nowLabel": "Ignore",
+                  "prefix": "Start",
+                  "withNow": false
+                },
+                "type": "datepicker",
+                "validate": true
+              },
+              {
+                "attribute": "end",
+                "datepicker": {
+                  "format": "epoch",
+                  "nowAsText": true,
+                  "nowLabel": "Ignore",
+                  "prefix": "End",
+                  "withNow": false
+                },
+                "type": "datepicker",
+                "validate": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "sections": [
+              {
+                "attribute": "ueTraceId",
+                "textField": {
+                  "prefix": "ueTraceId",
+                  "size": 16
+                },
+                "type": "textField"
+              },
+              {
+                "attribute": "traceRecordingSessionReference",
+                "textField": {
+                  "prefix": "traceRecordingSessionReference",
+                  "size": 16
+                },
+                "type": "textField"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "style": "",
+    "tile": {
+      "actions": [
+        {
+          "auto": {
+            "name": "apply_date_filter",
+            "trace": true
+          },
+          "footer": true,
+          "primary": true,
+          "title": "Apply"
+        }
+      ],
+      "auto": {
+        "name": "trace_date_select"
+      },
+      "defaultTestData": false,
+      "subtitle": "",
+      "title": "",
+      "validateAuto": {
+        "name": "trace_filter",
+        "trace": true
+      }
+    }
+  },
+  "format": "csv",
+  "name": "trace_date_select",
+  "systemTypes": [],
+  "type": "Form"
+}

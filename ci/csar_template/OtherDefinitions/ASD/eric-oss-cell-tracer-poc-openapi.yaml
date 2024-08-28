@@ -1,0 +1,506 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+openapi: "3.0.2"
+info:
+  x-api-id: 3e43d9fe-1fc9-4e1c-af1a-594dfde601f2
+  x-audience: external-public
+  description: "Cell Tracer rApp prototype"
+  version: "0.0.1"
+  title: "Cell Tracer rApp prototype"
+  license:
+    name: "COPYRIGHT Ericsson 2023"
+    url: "https://www.ericsson.com/en/legal"
+  termsOfService: "https://www.ericsson.com/en/legal"
+  contact:
+    email: "IDUN_rAppPrototypeTeam@ericsson.onmicrosoft.com"
+paths:
+  /v1/topology/nr/nodes:
+    get:
+      tags:
+        - "topology"
+      operationId: "getAllNodeFdn"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Fdn"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+  /v1/cm/nr/gnodebs:
+    get:
+      tags:
+        - "cm"
+        - "filters"
+      summary: "get all gnodebs the rApp stores"
+      operationId: "getGnodebs"
+      parameters:
+        - name: includeCells
+          in: query
+          description: "include cell info in the response"
+          schema:
+            type: boolean
+            default: false
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GNodebs"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+  /v1/cm/nr/nrcells:
+    get:
+      tags:
+        - "cm"
+        - "filters"
+      summary: "get the nrcells belonging to the gnodebs requested"
+      operationId: "getNrcells"
+      parameters:
+        - name: gnid
+          in: query
+          description: "gnodeb id, this is a 22 to 32 bits identifier"
+          schema:
+            type: array
+            default: []
+            items:
+              type: integer
+              format: int64
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NRCells"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+  /v1/event/nr/filters:
+    get:
+      tags:
+        - "events"
+        - "filters"
+      summary: "get nr event filter values"
+      operationId: "getNRFilterValues"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NRFilterValues"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+  /v1/event/nr/subscription:
+    put:
+      tags:
+        - "subscription"
+        - "filters"
+      summary: "configure the event subscription to EIC"
+      operationId: "updateSubscription"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SubscriptionDto"
+      responses:
+        "200":
+          description: "OK"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+    get:
+      tags:
+        - "subscription"
+        - "filters"
+      summary: "get the event subscription to EIC"
+      operationId: "getSubscription"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SubscriptionDto"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+    delete:
+      tags:
+        - "subscription"
+        - "filters"
+      summary: "blank the event subscription to EIC"
+      operationId: "blankSubscription"
+      responses:
+        "200":
+          description: "OK"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+  /v1/event/nr/events:
+    get:
+      tags:
+        - "events"
+      summary: "get nr events"
+      operationId: "getNREvents"
+      parameters:
+        - name: gnid
+          in: query
+          description: "gnodeb id, this is a 22 to 32 bits identifier"
+          style: form
+          explode: false
+          schema:
+            type: array
+            default: []
+            items:
+              type: integer
+              format: int64
+        - name: nci
+          in: query
+          style: form
+          explode: false
+          description: "nci"
+          schema:
+            type: array
+            default: []
+            items:
+              type: integer
+              format: int64
+        - name: eId
+          in: query
+          description: "event type id, as in event_id of the NR protobuf pmevent definition"
+          style: form
+          explode: false
+          schema:
+            type: array
+            default: []
+            items:
+              type: integer
+              format: int64
+        - name: nwFunction
+          in: query
+          style: form
+          explode: false
+          schema:
+            type: array
+            default: []
+            items:
+              $ref: "#/components/schemas/nwFunction"
+        - name: trcLevel
+          in: query
+          style: form
+          explode: true
+          schema:
+            type: array
+            default: []
+            items:
+              $ref: "#/components/schemas/trcLevel"
+        - name: ueTraceId
+          in: query
+          description: "UE trace ID"
+          schema:
+            type: string
+        - name: traceRecordingSessionReference
+          in: query
+          description: "trace recording session reference"
+          schema:
+            type: string
+        - name: start
+          in: query
+          description: "epoch start time (seconds)"
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: end
+          in: query
+          description: "epoch end time (seconds)"
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NREvents"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: "Internal Server Error"
+
+
+components:
+  schemas:
+    SubscriptionDto:
+      type: object
+      required:
+        - GNodebNames
+      properties:
+        trcLevels:
+          type: array
+          default: []
+          items:
+            $ref: "#/components/schemas/trcLevel"
+        nwFunctions:
+          type: array
+          default: []
+          items:
+            $ref: "#/components/schemas/nwFunction"
+        eId:
+          type: array
+          default: []
+          items:
+            type: integer
+            format: int64
+            description: "event type id, as in event_id of the NR protobuf pmevent definition"
+        GNodebNames:
+          type: array
+          default: []
+          items:
+            type: string
+          minItems: 1
+        active:
+          type: boolean
+          default: true
+        startTime:
+          type: integer
+          format: int64
+          minimum: 0
+        endTime:
+          type: integer
+          format: int64
+          minimum: 0
+    trcLevel:
+      type: string
+      description: "maps to gNodeB, Cell or UE"
+      enum:
+        - GNODEB
+        - CELL
+        - UE
+    networkElement:
+      type: string
+      description: "nE types for PM events"
+      enum:
+        - RC
+        - RP
+        - PP
+        - UE
+        - ENODEB
+        - GNODEB
+        - TARGET_GNODEB
+    messageDirection:
+      type: string
+      description: "message direction, as in Asn1Message.MessageDirection in NR protobuf definition"
+      enum:
+        - OUTGOING
+        - INCOMING
+        - UNKNOWN
+      default: UNKNOWN
+    nwFunction:
+      type: string
+      description: "maps to PmEventMessageGroup in pmevent definition, e.g. CUUP, CUCP, DU, etc."
+      enum:
+        - NO_VALUE
+        - DU
+        - CUCP
+        - CUUP
+        - UNRECOGNIZED
+    Fdn:
+      type: object
+      required:
+        - name
+        - fdn
+      properties:
+        name:
+          type: string
+        fdn:
+          type: string
+    GNodebs:
+      type: array
+      items:
+        $ref: "#/components/schemas/GNodeb"
+    GNodeb:
+      type: object
+      required:
+        - gnid
+        - gnodebName
+      properties:
+        gnid:
+          type: integer
+          format: int64
+          description: ""
+        gnodebName:
+          description: "managed element, from FDN"
+          type: string
+        cells:
+          $ref: "#/components/schemas/NRCells"
+    NRCells:
+      type: array
+      items:
+        $ref: "#/components/schemas/NRCell"
+    NRCell:
+      type: object
+      required:
+        - nci
+        - cellName
+      properties:
+        nci:
+          type: integer
+          format: int64
+          description: "nci"
+        cellName:
+          description: "NRCellDU field from FDN"
+          type: string
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+    NRFilterValues:
+      type: object
+      required:
+        - nwFunctions
+        - trcLevels
+        - eventTypes
+      properties:
+        trcLevels:
+          type: array
+          items:
+            $ref: "#/components/schemas/trcLevel"
+        nwFunctions:
+          type: array
+          items:
+            $ref: "#/components/schemas/nwFunction"
+        eventTypes:
+          type: array
+          items:
+            $ref: "#/components/schemas/eventType"
+    eventType:
+      type: object
+      required:
+        - eId
+        - eventTypeName
+        - nwFunction
+        - trcLevel
+      properties:
+        eId:
+          type: integer
+          format: int64
+          description: "event type id, as in event_id of the NR protobuf pmevent definition"
+        eventTypeName:
+          description: "event type, class name of the specific event"
+          type: string
+        nwFunction:
+          $ref: "#/components/schemas/nwFunction"
+        trcLevel:
+          $ref: "#/components/schemas/trcLevel"
+    NREvents:
+      type: array
+      items:
+        $ref: "#/components/schemas/NREvent"
+    NREvent:
+      type: object
+      required:
+        - timestamp
+        - gnodebName
+        - eventType
+        - messageDirection
+        - body
+      properties:
+        timestamp:
+          type: integer
+          format: int64
+          minimum: 0
+          description: "Timestamp, epoc ms"
+        gnodebName:
+          type: string
+          description: "gNodeB Name"
+        NRCell:
+          $ref: "#/components/schemas/NRCell"
+        eventType:
+          $ref: "#/components/schemas/eventType"
+        messageDirection:
+          $ref: "#/components/schemas/messageDirection"
+        traceRecordingSessionReference:
+          description: "trace recording session reference"
+          type: string
+        ueTraceId:
+          description: "UE trace ID"
+          type: string
+        body:
+          description: "PM Event body JSON"
+          type: string
+        networkElement1:
+          $ref: "#/components/schemas/networkElement"
+        networkElement2:
+          $ref: "#/components/schemas/networkElement"
+        asn1Content:
+          description: "Decoded asn1 context"
+          type: string

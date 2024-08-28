@@ -1,0 +1,18 @@
+app.data.config: file:/config/
+app.security.certificates: file:{{ .Values.caCertMountPath }}/**/{{ .Values.caSecretKey }}
+{{- if .Values.asn1DecoderPort }}
+app.asn1.decoder.enabled: true
+quarkus.http.port: {{ .Values.asn1DecoderPort }}
+grpc.client.asn1Decoder.address: static://localhost:{{ .Values.asn1DecoderPort }}
+{{- end }}
+{{- if .Values.clientId }}
+rapp-sdk.kafka.oauth: true
+spring.kafka.properties.security.protocol: SASL_SSL
+spring.kafka.properties.sasl.jaas.config: org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required oauth.token.endpoint.uri="${BASE_URL:}/auth/realms/${TENANT:master}/protocol/openid-connect/token" oauth.client.id="${CLIENT_ID:}" oauth.client.secret="${CLIENT_SECRET:}" oauth.ssl.truststore.location="${TRUST_STORE_LOCATION:}/truststore.jks" oauth.ssl.truststore.password="${TRUST_STORE_PASSWORD:}";
+{{- else }}
+rapp-sdk.kafka.oauth: false
+{{- end }}
+rapp-sdk.dcc.enabled: false
+{{- with .Values.configuration }}
+{{ toYaml . }}
+{{- end }}

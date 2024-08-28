@@ -1,0 +1,48 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+
+spring:
+  flyway:
+    enabled: false
+  datasource:
+    url: jdbc:h2:mem:celltracer;INIT=create domain if not exists jsonb as text;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.H2Dialect
+      format_sql: true
+
+management.endpoint.health.group:
+  startup.include:
+  liveness.exclude: readinessState
+  readiness.exclude: livenessState
+
+rapp-sdk:
+  catalog:
+    base-path: ${BASE_URL:}/dmm-data-catalog
+  kafka:
+    enabled: false
+  dcc:
+    enabled: false
+
+app.data.config:
+app.security.certificates: classpath:__files/oauth/ca.pem
+app.scheduling.enabled: false
+
+pm.cleaningScheduler: "-"

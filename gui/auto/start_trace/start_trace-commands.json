@@ -1,0 +1,126 @@
+{
+  "$schema": "../autoCommands.schema.json",
+  "autoCommand": [
+    {
+      "edges": [
+        {
+          "id": 1
+        }
+      ],
+      "id": 0,
+      "input": {
+        "config": {
+          "argsSchema": {},
+          "showDialog": false
+        },
+        "configFormat": "json",
+        "data": {},
+        "dataFormat": "json",
+        "name": "",
+        "title": ""
+      },
+      "posX": -401,
+      "posY": 75,
+      "type": "start"
+    },
+    {
+      "edges": [
+        {
+          "id": 2
+        }
+      ],
+      "id": 1,
+      "input": {
+        "configFormat": "javascript",
+        "dataFormat": "javascript",
+        "name": "update",
+        "title": "update-request"
+      },
+      "posX": -260,
+      "posY": 75.5,
+      "type": "fetch"
+    },
+    {
+      "edges": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "id": 2,
+      "input": {
+        "config": {},
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": ""
+      },
+      "posX": -111,
+      "posY": 76,
+      "type": "script"
+    },
+    {
+      "edges": [
+        {
+          "id": 5
+        }
+      ],
+      "id": 3,
+      "input": {
+        "config": {
+          "description": "",
+          "publish": "private",
+          "title": "Subscription update succeeded",
+          "type": "confirm"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "succeeded",
+        "title": "Confirm-update"
+      },
+      "posX": 42,
+      "posY": 78,
+      "type": "notification"
+    },
+    {
+      "edges": [],
+      "id": 4,
+      "input": {
+        "config": {
+          "description": "",
+          "publish": "private",
+          "title": "Subscription update failed",
+          "type": "error"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "failed",
+        "title": "Failed-update"
+      },
+      "posX": -110,
+      "posY": 217,
+      "type": "notification"
+    },
+    {
+      "edges": [],
+      "id": 5,
+      "input": {
+        "config": {
+          "dataType": "json",
+          "publish": "public",
+          "sendType": "set",
+          "widgetName": "trace_form"
+        },
+        "configFormat": "json",
+        "dataFormat": "javascript",
+        "name": "",
+        "title": "Activate"
+      },
+      "posX": 254,
+      "posY": 79,
+      "type": "widget"
+    }
+  ]
+}

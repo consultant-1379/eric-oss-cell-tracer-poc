@@ -1,0 +1,17 @@
+{
+  "$schema": "projectUser.schema.json",
+  "userDetails": [
+    {
+      "default": true,
+      "email": "",
+      "firstName": "",
+      "hasImage": "false",
+      "name": "eiap",
+      "pass": "*****",
+      "roles": [
+        "user-role"
+      ],
+      "surname": ""
+    }
+  ]
+}

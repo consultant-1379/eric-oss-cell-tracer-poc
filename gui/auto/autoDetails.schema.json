@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "autoDetails.schema.json",
+  "title": "Auto Details",
+  "description": "Auto details",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]*$",
+      "default": "",
+      "minLength": 1
+    },
+    "type": {
+      "type": "array",
+      "default": []
+    },
+    "confirm": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "max": {
+      "type": "integer",
+      "default": 1000
+    },
+    "cacheTime": {
+      "type": "integer",
+      "default": 0
+    },
+    "user": {
+      "type": "string"
+    },
+    "speechRegex": {
+      "type": "string"
+    },
+    "viewPermission": {
+      "type": "string"
+    }
+  }
+}

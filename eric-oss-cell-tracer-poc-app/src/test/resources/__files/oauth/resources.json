@@ -1,0 +1,170 @@
+{
+  "ericsson-enm:ManagedElement": [
+    {
+      "id": "NR123gNodeBRadio00019",
+      "ericsson-enm:GNBDUFunction": [
+        {
+          "id": "1",
+          "ericsson-enm:NRSectorCarrier": [
+            {
+              "id": "1",
+              "attributes": {
+                "altitude": "null",
+                "noOfTxAntennas": "4",
+                "sectorEquipmentFunctionRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR123gNodeBRadio00019,ManagedElement=NR123gNodeBRadio00019,NodeSupport=1,SectorEquipmentFunction=1",
+                "powerMeasAvgTime": "null",
+                "arfcnUL": "0",
+                "latitude": "null",
+                "noOfUsedTxAntennas": "null",
+                "essScLocalId": "null",
+                "nRSectorCarrierId": "1",
+                "rfBranchTxRef": "null",
+                "txPowerPersistentLock": "false",
+                "administrativeState": "UNLOCKED",
+                "arfcnDL": "2076665",
+                "txPowerChangeRate": "1",
+                "availabilityStatus": "null",
+                "scaledTransmissionPower": "null",
+                "ulCalibrationData": {
+                  "ulCalibrationActiveMethod": "NONE",
+                  "ulCalibrationStatus": "INACTIVE",
+                  "ulCalibrationSupportedMethods": "null"
+                },
+                "longitude": "null",
+                "coverage": {
+                  "radius": "1",
+                  "openingAngle": "0",
+                  "bearing": "0"
+                },
+                "rfBranchRxRef": "null",
+                "nullSteeringMode": "ALL",
+                "frequencyDL": "null",
+                "frameStartOffset": "0",
+                "essScPairId": "null",
+                "bSChannelBwUL": "0",
+                "radioTransmitPerfMode": "COVERAGE",
+                "txPowerRatio": "100",
+                "configuredMaxTxPower": "10000",
+                "azimuthNull": [
+                  {
+                    "horizontalAngle": "null",
+                    "verticalAngle": "null",
+                    "nullWidth": "null",
+                    "frequency": "null"
+                  }
+                ],
+                "dlCalibrationData": {
+                  "dlCalibrationSupportedMethods": "null",
+                  "dlCalibrationActiveMethod": "NONE",
+                  "dlCalibrationStatus": "INACTIVE"
+                },
+                "noOfUsedRxAntennas": "null",
+                "frequencyUL": "null",
+                "polygon": [
+                  {
+                    "latitude": "null",
+                    "longitude": "null"
+                  }
+                ],
+                "bSChannelBwDL": "0",
+                "cbrsEnabled": "true",
+                "noOfRxAntennas": "4",
+                "reservedBy": [
+                  "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR123gNodeBRadio00019,ManagedElement=NR123gNodeBRadio00019,GNBDUFunction=1,NRCellDU=NR03gNodeBRadio00002-1"
+                ],
+                "operationalState": "ENABLED",
+                "txDirection": "DL_AND_UL",
+                "elevationNull": [
+                  {
+                    "verticalAngle": "null",
+                    "nullWidth": "null",
+                    "frequency": "null"
+                  }
+                ],
+                "maxTransmissionPower": "null"
+              }
+            },
+            {
+              "id": "2",
+              "attributes": {
+                "altitude": "10",
+                "noOfTxAntennas": "4",
+                "sectorEquipmentFunctionRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR123gNodeBRadio00019,ManagedElement=NR123gNodeBRadio00019,NodeSupport=1,SectorEquipmentFunction=1",
+                "powerMeasAvgTime": "null",
+                "arfcnUL": "0",
+                "latitude": "null",
+                "noOfUsedTxAntennas": "null",
+                "essScLocalId": "null",
+                "nRSectorCarrierId": "2",
+                "rfBranchTxRef": "null",
+                "txPowerPersistentLock": "false",
+                "administrativeState": "UNLOCKED",
+                "arfcnDL": "2076665",
+                "txPowerChangeRate": "1",
+                "availabilityStatus": "null",
+                "scaledTransmissionPower": "null",
+                "ulCalibrationData": {
+                  "ulCalibrationActiveMethod": "NONE",
+                  "ulCalibrationStatus": "INACTIVE",
+                  "ulCalibrationSupportedMethods": "null"
+                },
+                "longitude": "null",
+                "coverage": {
+                  "radius": "1",
+                  "openingAngle": "0",
+                  "bearing": "0"
+                },
+                "rfBranchRxRef": "null",
+                "nullSteeringMode": "ALL",
+                "frequencyDL": "null",
+                "frameStartOffset": "0",
+                "essScPairId": "null",
+                "bSChannelBwUL": "0",
+                "radioTransmitPerfMode": "COVERAGE",
+                "txPowerRatio": "100",
+                "configuredMaxTxPower": "10000",
+                "azimuthNull": [
+                  {
+                    "horizontalAngle": "null",
+                    "verticalAngle": "null",
+                    "nullWidth": "null",
+                    "frequency": "null"
+                  }
+                ],
+                "dlCalibrationData": {
+                  "dlCalibrationSupportedMethods": "null",
+                  "dlCalibrationActiveMethod": "NONE",
+                  "dlCalibrationStatus": "INACTIVE"
+                },
+                "noOfUsedRxAntennas": "null",
+                "frequencyUL": "null",
+                "polygon": [
+                  {
+                    "latitude": "null",
+                    "longitude": "null"
+                  }
+                ],
+                "bSChannelBwDL": "0",
+                "cbrsEnabled": "true",
+                "noOfRxAntennas": "4",
+                "reservedBy": [
+                  "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR123gNodeBRadio00019,ManagedElement=NR123gNodeBRadio00019,GNBDUFunction=1,NRCellDU=NR03gNodeBRadio00002-2"
+                ],
+                "operationalState": "ENABLED",
+                "txDirection": "DL_AND_UL",
+                "elevationNull": [
+                  {
+                    "verticalAngle": "null",
+                    "nullWidth": "null",
+                    "frequency": "null"
+                  }
+                ],
+                "maxTransmissionPower": "null"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

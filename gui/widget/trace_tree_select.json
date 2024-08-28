@@ -1,0 +1,37 @@
+{
+  "$schema": "projectWidget.schema.json",
+  "config": {
+    "style": ".widget-rows {\n    min-height:50vh;\n    max-height:50vh;\n}",
+    "tile": {
+      "actions": [
+        {
+          "auto": {
+            "name": "apply_tree_filter",
+            "trace": true
+          },
+          "footer": true,
+          "primary": true,
+          "title": "Apply"
+        }
+      ],
+      "auto": {
+        "args": {
+          "app": "pid"
+        },
+        "name": "trace_tree_select"
+      },
+      "defaultTestData": false,
+      "subtitle": "",
+      "title": "Node and Network service selection"
+    },
+    "tree": {
+      "dataTitle": "",
+      "filter": true,
+      "selectionTitle": ""
+    }
+  },
+  "format": "csv",
+  "name": "trace_tree_select",
+  "systemTypes": [],
+  "type": "TreeSelect"
+}

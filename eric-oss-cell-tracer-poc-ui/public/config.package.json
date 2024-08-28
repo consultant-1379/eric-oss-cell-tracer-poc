@@ -1,0 +1,10 @@
+{
+  "modules": [
+    {
+      "name": "cell-tracer-app",
+      "version": "1.0.0",
+      "path": "/src/apps/cell-tracer-app",
+      "main": "cell-tracer-app.js"
+    }
+  ]
+}

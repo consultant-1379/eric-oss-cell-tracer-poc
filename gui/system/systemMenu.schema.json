@@ -1,0 +1,303 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "systemMenu.schema.json",
+  "title": "System Menu",
+  "description": "Set the menu panel.",
+  "examples": [
+    {
+      "defaultApp": "owl-editor",
+      "openMenu": true,
+      "hideMenu": false,
+      "breadcrumb": {
+        "enable": true,
+        "parents": []
+      },
+      "data": [
+        {
+          "displayName": "Ericsson",
+          "name": "ericsson",
+          "type": "external",
+          "url": "https://ericsson.com/"
+        },
+        {
+          "displayName": "Group",
+          "name": "group",
+          "childNames": [
+            "home"
+          ]
+        },
+        {
+          "displayName": "Home",
+          "name": "home",
+          "type": "euisdk"
+        }
+      ]
+    }
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "defaultApp": {
+      "type": "string",
+      "default": "owl-editor"
+    },
+    "hideMenu": {
+      "type": "boolean",
+      "default": false
+    },
+    "owlVideos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "options": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "searchable": {
+      "type": "boolean",
+      "default": true,
+      "description": "Adds an eui-text-field to the top of the navigation-menu to allow a user to search for Apps by the displayName/tags"
+    },
+    "openMenu": {
+      "type": "boolean",
+      "default": true
+    },
+    "breadcrumb": {
+      "type": "object",
+      "properties": {
+        "enable": {
+          "type": "boolean"
+        },
+        "parents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "url",
+              "title"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "displayName"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]*$",
+            "description": "Full name of an UI entity. Well-known name defined during development time."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of a UI entity. This will be the name of the application displayed in the navigation menu and acts as the title of the application."
+          },
+          "version": {
+            "type": "string",
+            "description": "Version of an UI application. Should be in semantic version."
+          },
+          "color": {
+            "type": "string",
+            "description": "Color of the application to be used in GAS. Color should be CSS supported name or HEX value"
+          },
+          "descriptionLong": {
+            "type": "string",
+            "description": "Detailed description of an UI entity. If provided, is displayed as a tooltip on the menu item."
+          },
+          "descriptionShort": {
+            "type": "string",
+            "description": "Short an UI entity. If provided, can be used as the subtitle for the application."
+          },
+          "type": {
+            "type": "string",
+            "description": "Classification of an UI entity. Example values are euisdk, oden, external, etc. If set to external, the menuPath is overridden and the external URL will be used."
+          },
+          "priority": {
+            "type": "integer",
+            "description": "Display priority order."
+          },
+          "module": {
+            "description": "Module reference which implements this application.",
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "description": "External URL to navigate to."
+          },
+          "childNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "This is a group of menu item datasets. Childnames must be the names of other apps."
+          },
+          "hidden": {
+            "type": "boolean",
+            "description": "Default: false. Set to true to hide the app form the menu."
+          },
+          "route": {
+            "type": "string",
+            "description": "Relative path of an UI application. Mandatory Container specific types."
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of keywords written as Strings. These are used by the navigation-menu when search functionality is enabled."
+          },
+          "specification": {
+            "description": "Location of the application specification file.",
+            "type": "string"
+          },
+          "options": {
+            "description": "Extra runtime options for the application.",
+            "type": "object"
+          },
+          "acronym": {
+            "description": "Acronym of the application.",
+            "type": "string"
+          },
+          "groupNames": {
+            "description": "Groups of an UI application.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "description": "Base UI Entity Definition.",
+        "type": "object",
+        "required": [
+          "name",
+          "displayName",
+          "version"
+        ],
+        "properties": {
+          "name": {
+            "description": "Unique name of the UI entity.",
+            "type": "string"
+          },
+          "displayName": {
+            "description": "Name of an UI entity. This will be used as display name in the launcher.",
+            "type": "string"
+          },
+          "version": {
+            "description": "Version of an UI application. Should be in semantic version.",
+            "type": "string"
+          },
+          "descriptionLong": {
+            "description": "Long detailed description of an UI entity.",
+            "type": "string"
+          },
+          "descriptionShort": {
+            "description": "A short description of an UI entity.",
+            "type": "string"
+          },
+          "type": {
+            "description": "Classification of an UI entity.",
+            "type": "string"
+          },
+          "priority": {
+            "description": "Display priority order.",
+            "type": "integer"
+          },
+          "tags": {
+            "description": "Tags associated.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "color": {
+            "description": "Color of the application.",
+            "type": "string"
+          },
+          "acronym": {
+            "description": "Acronym of the application.",
+            "type": "string"
+          },
+          "hidden": {
+            "description": "Default: false. Set to true to hide the group form the menu.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false,
+        "examples": [
+          {
+            "name": "adp-oam-ui-tools",
+            "displayName": "OAM Tools",
+            "descriptionLong": "ADP.OAM.UI.TOOLS.DESC",
+            "descriptionShort": "ADP.OAM",
+            "version": "0.1.0",
+            "type": "internal",
+            "priority": 1,
+            "tags": [
+              "tools"
+            ],
+            "color": "purple",
+            "acronym": "OAM"
+          },
+          {
+            "id": "adp-tools",
+            "name": "ADP.TOOLS.NAME",
+            "descriptionLong": "Collection of tools application",
+            "type": "domain",
+            "priority": 10,
+            "tags": [
+              "tools"
+            ]
+          },
+          {
+            "id": "adp-latest-entities",
+            "version": "0.1.0",
+            "descriptionLong": "Latest Entities",
+            "type": "json",
+            "priority": 10
+          }
+        ]
+      }
+    },
+    "groupMappings": {
+      "type": "array"
+    },
+    "overrides": {
+      "type": "object"
+    }
+  }
+}

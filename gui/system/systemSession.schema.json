@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "systemSession.schema.json",
+  "title": "System Session",
+  "description": "Passport session properties. Restart of backend (owlws) required.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "default": "owl.connect.sid"
+    },
+    "cookie": {
+      "type": "object",
+      "description": "maxAge: 7776000000 // 90 * 24 * 60 * 60 * 1000 = Save 90 days",
+      "default": {
+        "maxAge": 7776000000
+      }
+    },
+    "saveUninitialized": {
+      "type": "boolean",
+      "default": true
+    },
+    "resave": {
+      "type": "boolean",
+      "default": true
+    },
+    "externalUser": {
+      "type": "boolean",
+      "default": false,
+      "description": "Works together with editor security block to assign external user, will impact who am I responses."
+    },
+    "externalHeader": {
+      "type": "string",
+      "description": "Set external username from header"
+    },
+    "externalLogout": {
+      "type": "string",
+      "description": "External logout url to be redirected to at logout e.g. /logout"
+    },
+    "externalLogin": {
+      "type": "object",
+      "description": "External login",
+      "required": [
+        "enabled",
+        "auto"
+      ],
+      "additionalProperties": false,
+      "default": {
+        "enabled": false,
+        "auto": {
+          "name": ""
+        },
+        "defaultRoles": []
+      },
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "passwordTimeout": {
+          "type": "integer",
+          "description": "Password will be kept in memory until timeout in ms. Default 30000 (30 seconds)."
+        },
+        "defaultRoles": {
+          "type": "array",
+          "description": "If user does not exists it will be created with those roles.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "auto": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "args": {
+              "type": "object"
+            },
+            "trace": {
+              "type": "boolean"
+            },
+            "headers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "cookies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
